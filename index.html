@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreedomX Games</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0f051d, #1b1035);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      color: #00aaff;
+      -webkit-text-stroke: 1px #ffffff;
+      background: linear-gradient(90deg, #00aaff, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-top: 60px;
+      text-transform: uppercase;
+    }
+
+    .tagline {
+      font-size: 1.5rem;
+      color: #aaa;
+      margin-bottom: 2rem;
+    }
+
+    .cheerleaders {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 3rem 1rem;
+    }
+
+    .cheerleaders img {
+      width: 250px;
+      border: 2px solid #00aaff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 170, 255, 0.5);
+      transition: transform 0.3s;
+    }
+
+    .cheerleaders img:hover {
+      transform: scale(1.05);
+    }
+
+    .enter-button {
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
+      background-color: #00aaff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 2rem;
+    }
+
+    .enter-button:hover {
+      background-color: #0088cc;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <h1>FreedomX Games</h1>
+  <div class="tagline">The sharpest football minds in the world play here.</div>
+
+  <div class="cheerleaders">
+    <img src="https://i.imgur.com/RYTuh8V.jpeg" alt="Cheerleader 1">
+    <img src="https://i.imgur.com/N8P9EuG.jpeg" alt="Cheerleader 2">
+    <img src="https://i.imgur.com/6WZ0bna.jpeg" alt="Cheerleader 3">
+  </div>
+
+  <button class="enter-button">Enter the Game</button>
+</body>
+</html>
