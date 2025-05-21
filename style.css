@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle at center, #0d0d0d 0%, #000000 100%);
+  color: white;
+  overflow-x: hidden;
+}
+
+.header-title {
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 60px;
+  background: linear-gradient(to right, #00aaff, #8efff5, #00aaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 5px #00f0ff, 0 0 15px #00f0ff;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #9beeff;
+  font-style: italic;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0, 191, 255, 0.5);
+}
+
+.division-box {
+  background-color: #111;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  border: 2px solid #00aaff;
+  transition: transform 0.3s;
+}
+
+.division-box:hover {
+  transform: scale(1.03);
+  border-color: #00ffcc;
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+button {
+  background: linear-gradient(to right, #00aaff, #0055ff);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00aaff;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(to right, #00ffcc, #0088ff);
+}
+
+/* Optional: Sexy cheerleader placeholder */
+.cheerleaders {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.cheerleaders img {
+  width: 160px;
+  height: auto;
+  margin: 0 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #ff1493;
+}
