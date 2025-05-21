@@ -1,81 +1,335 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+ /
+
+System: Here's the continuation of the `style.css` file to complete the vibrant Web3 futuristic design, incorporating the chrome-text effect with a Polygon blue glow, and styling all sections including the playful “sexy cheerleaders” section.
+
+### style.css (continued)
+```css
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  background: radial-gradient(circle at center, #0d0d0d 0%, #000000 100%);
-  color: white;
-  overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1a1a3d, #2e1a47);
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-.header-title {
-  font-size: 4rem;
-  font-weight: 900;
-  text-align: center;
-  margin-top: 60px;
-  background: linear-gradient(to right, #00aaff, #8efff5, #00aaff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 5px #00f0ff, 0 0 15px #00f0ff;
-}
-
-.subtitle {
-  font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 30px;
-  color: #9beeff;
-  font-style: italic;
-}
-
+/* Container */
 .container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 2rem;
-  background: rgba(0, 0, 0, 0.75);
-  border-radius: 20px;
-  box-shadow: 0 0 40px rgba(0, 191, 255, 0.5);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.division-box {
-  background-color: #111;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 12px;
-  border: 2px solid #00aaff;
-  transition: transform 0.3s;
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
-.division-box:hover {
-  transform: scale(1.03);
-  border-color: #00ffcc;
-  box-shadow: 0 0 15px #00ffcc;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-button {
-  background: linear-gradient(to right, #00aaff, #0055ff);
-  border: none;
-  color: white;
-  font-size: 1.2rem;
-  padding: 12px 24px;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: 0 0 10px #00aaff;
-  transition: background 0.3s;
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
 }
 
-button:hover {
-  background: linear-gradient(to right, #00ffcc, #0088ff);
+.tagline {
+    font-size: 1.2rem;
+    color: #00d4ff;
+    text-shadow: 0 0 10px #00d4ff;
+    margin-top: 10px;
 }
 
-/* Optional: Sexy cheerleader placeholder */
-.cheerleaders {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-.cheerleaders img {
-  width: 160px;
-  height: auto;
-  margin: 0 15px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px #ff1493;
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00d4ff;
+    text-shadow: 0 0 10px #00d4ff;
+}
+
+/* Chrome Text Effect with Polygon Blue Glow */
+.chrome-text {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(45deg, #ffffff, #b3b3b3, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 15px #00d4ff, 0 0 30px #00d4ff;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+    }
+    to {
+        text-shadow: 0 0 20px #00d4ff, 0 0 40px #00d4ff;
+    }
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('https://via.placeholder.com/1920x1080?text=Futuristic+Football+Field') no-repeat center center/cover;
+    position: relative;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+#hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #00d4ff;
+    color: #1a1a3d;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #00b0d6;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00d4ff;
+}
+
+/* About Section */
+#about {
+    padding: 80px 0;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Entry Fees Section */
+#entry-fees {
+    padding: 80px 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#entry-fees h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.fees-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.fee-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fee-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #00d4ff;
+}
+
+.fee-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.fee-card p {
+    font-size: 1.2rem;
+}
+
+/* Scoring Rules Section */
+#scoring {
+    padding: 80px 0;
+    text-align: center;
+}
+
+#scoring h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#scoring ul {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    text-align: left;
+}
+
+#scoring ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#scoring ul li strong {
+    color: #00d4ff;
+}
+
+/* Cheerleaders Section */
+#cheerleaders {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #2e1a47, #1a1a3d);
+    text-align: center;
+}
+
+#cheerleaders h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cheerleader-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.cheerleader-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cheerleader-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #00d4ff;
+}
+
+.cheerleader-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.cheerleader-card p {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+}
+
+/* Join Section */
+#join {
+    padding: 80px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#join h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#join p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1.2rem;
+    }
+
+    .fees-grid, .cheerleader-gallery {
+        grid-template-columns: 1fr;
+    }
 }
