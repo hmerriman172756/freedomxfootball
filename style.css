@@ -44,7 +44,6 @@ header h1 {
 .tagline {
     font-size: 1.2rem;
     color: #00d4ff;
-    text-shadow: 0 0 10px #00d4ff;
     margin-top: 10px;
 }
 
@@ -64,31 +63,21 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #00d4ff;
-    text-shadow: 0 0 10px #00d4ff;
 }
 
-/* X-Logo Inspired Text Effect */
+/* X-Logo Inspired Text Effect (Black with White Outline) */
 .x-logo {
     font-family: 'Orbitron', sans-serif;
     font-weight: 900;
     font-size: 2.5rem;
-    background: linear-gradient(45deg, #000000, #ffffff, #000000);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 15px #00d4ff, 0 0 30px #00d4ff;
-    letter-spacing: 2px;
+    color: #000000;
+    -webkit-text-stroke: 1px #ffffff;
     text-transform: uppercase;
-    animation: glow 2s ease-in-out infinite alternate;
+    letter-spacing: 3px;
 }
 
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
-    }
-    to {
-        text-shadow: 0 0 20px #00d4ff, 0 0 40px #00d4ff;
-    }
+#hero .x-logo {
+    font-size: 3rem;
 }
 
 /* Hero Section */
@@ -119,7 +108,6 @@ nav ul li a:hover {
 }
 
 #hero h2 {
-    font-size: 3rem;
     margin-bottom: 20px;
 }
 
@@ -143,7 +131,6 @@ nav ul li a:hover {
 .cta-button:hover {
     background: #00b0d6;
     transform: scale(1.05);
-    box-shadow: 0 0 20px #00d4ff;
 }
 
 /* About Section */
@@ -186,12 +173,11 @@ nav ul li a:hover {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .fee-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 20px #00d4ff;
 }
 
 .fee-card h3 {
@@ -202,6 +188,11 @@ nav ul li a:hover {
 
 .fee-card p {
     font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.fee-card .cta-button {
+    margin-top: 10px;
 }
 
 /* Scoring Rules Section */
