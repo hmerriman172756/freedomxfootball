@@ -1,85 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FreedomX Games</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #0f051d, #1b1035);
-      color: white;
-      text-align: center;
-      overflow-x: hidden;
-    }
-
-    h1 {
-      font-size: 3.5rem;
-      color: #00aaff;
-      -webkit-text-stroke: 1px #ffffff;
-      background: linear-gradient(90deg, #00aaff, #ffffff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-top: 60px;
-      text-transform: uppercase;
-    }
-
-    .tagline {
-      font-size: 1.5rem;
-      color: #aaa;
-      margin-bottom: 2rem;
-    }
-
-    .cheerleaders {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin: 3rem 1rem;
-    }
-
-    .cheerleaders img {
-      width: 250px;
-      border: 2px solid #00aaff;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 170, 255, 0.5);
-      transition: transform 0.3s;
-    }
-
-    .cheerleaders img:hover {
-      transform: scale(1.05);
-    }
-
-    .enter-button {
-      font-size: 1.2rem;
-      padding: 1rem 2rem;
-      background-color: #00aaff;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
-      margin-top: 2rem;
-    }
-
-    .enter-button:hover {
-      background-color: #0088cc;
-    }
-  </style>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreedomXGames - Where the Sharpest Minds in Football Come to Play</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>FreedomX Games</h1>
-  <div class="tagline">The sharpest football minds in the world play here.</div>
+    <header>
+        <div class="container">
+            <h1 class="chrome-text">FreedomXGames</h1>
+            <p class="tagline">Where the Sharpest Minds in Football Come to Play</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#entry-fees">Entry Fees</a></li>
+                    <li><a href="#scoring">Scoring Rules</a></li>
+                    <li><a href="#cheerleaders">Cheerleaders</a></li>
+                    <li><a href="#join">Join Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <div class="cheerleaders">
-    <img src="https://i.imgur.com/RYTuh8V.jpeg" alt="Cheerleader 1">
-    <img src="https://i.imgur.com/N8P9EuG.jpeg" alt="Cheerleader 2">
-    <img src="https://i.imgur.com/6WZ0bna.jpeg" alt="Cheerleader 3">
-  </div>
+    <section id="hero">
+        <div class="container">
+            <h2 class="chrome-text">Join the Ultimate Football Experience</h2>
+            <p>Step into the Web3 arena of FreedomXGames, where strategy, skill, and swagger collide!</p>
+            <a href="#join" class="cta-button">Play Now</a>
+        </div>
+    </section>
 
-  <button class="enter-button">Enter the Game</button>
+    <section id="about">
+        <div class="container">
+            <h2>About FreedomXGames</h2>
+            <p>FreedomXGames is a cutting-edge, Web3-powered football game that brings together fans, semi-pros, and pro players in a vibrant, futuristic arena. Compete, strategize, and dominate with blockchain-backed rewards and a community of the sharpest minds in football.</p>
+        </div>
+    </section>
+
+    <section id="entry-fees">
+        <div class="container">
+            <h2>Entry Fees</h2>
+            <div class="fees-grid">
+                <div class="fee-card">
+                    <h3>Fan</h3>
+                    <p>$250</p>
+                    <p>Perfect for casual players looking to test their skills.</p>
+                </div>
+                <div class="fee-card">
+                    <h3>Semi-Pro</h3>
+                    <p>$500</p>
+                    <p>For players ready to step up their game.</p>
+                </div>
+                <div class="fee-card">
+                    <h3>Pro Player</h3>
+                    <p>$1000</p>
+                    <p>Join the elite and compete for top rewards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="scoring">
+        <div class="container">
+            <h2>Scoring Rules</h2>
+            <ul>
+                <li><strong>1 Point:</strong> Successful pass or tackle.</li>
+                <li><strong>2 Points:</strong> Interception or goal-line stand.</li>
+                <li><strong>3 Points:</strong> Touchdown or game-changing play.</li>
+            </ul>
+            <p>Master the field with strategic plays to maximize your score!</p>
+        </div>
+    </section>
+
+    <section id="cheerleaders">
+        <div class="container">
+            <h2>Meet Our Sexy Cheerleaders</h2>
+            <p>Our cheerleaders bring the energy to FreedomXGames! With dazzling performances and Web3 flair, they’re here to hype up every match.</p>
+            <div class="cheerleader-gallery">
+                <div class="cheerleader-card">
+                    <img src="https://via.placeholder.com/300x400?text=Cheerleader+1" alt="Cheerleader 1">
+                    <p>Neon Nova</p>
+                </div>
+                <div class="cheerleader-card">
+                    <img src="https://via.placeholder.com/300x400?text=Cheerleader+2" alt="Cheerleader 2">
+                    <p>Crypto Queen</p>
+                </div>
+                <div class="cheerleader-card">
+                    <img src="https://via.placeholder.com/300x400?text=Cheerleader+3" alt="Cheerleader 3">
+                    <p>Pixel Pulse</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="join">
+        <div class="container">
+            <h2>Join the Game</h2>
+            <p>Ready to dominate the field? Sign up now and enter the Web3 football revolution!</p>
+            <a href="#" class="cta-button">Sign Up</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 FreedomXGames. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
