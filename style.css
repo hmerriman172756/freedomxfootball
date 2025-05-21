@@ -2,16 +2,6 @@
 * {
     margin: 0;
     padding: 0;
- /
-
-System: Here's the continuation of the `style.css` file to complete the vibrant Web3 futuristic design, incorporating the chrome-text effect with a Polygon blue glow, and styling all sections including the playful “sexy cheerleaders” section.
-
-### style.css (continued)
-```css
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -77,14 +67,18 @@ nav ul li a:hover {
     text-shadow: 0 0 10px #00d4ff;
 }
 
-/* Chrome Text Effect with Polygon Blue Glow */
-.chrome-text {
+/* X-Logo Inspired Text Effect */
+.x-logo {
     font-family: 'Orbitron', sans-serif;
-    background: linear-gradient(45deg, #ffffff, #b3b3b3, #ffffff);
+    font-weight: 900;
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, #000000, #ffffff, #000000);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     text-shadow: 0 0 15px #00d4ff, 0 0 30px #00d4ff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     animation: glow 2s ease-in-out infinite alternate;
 }
 
@@ -237,49 +231,6 @@ nav ul li a:hover {
     color: #00d4ff;
 }
 
-/* Cheerleaders Section */
-#cheerleaders {
-    padding: 80px 0;
-    background: linear-gradient(135deg, #2e1a47, #1a1a3d);
-    text-align: center;
-}
-
-#cheerleaders h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.cheerleader-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.cheerleader-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cheerleader-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 20px #00d4ff;
-}
-
-.cheerleader-card img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.cheerleader-card p {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.2rem;
-}
-
 /* Join Section */
 #join {
     padding: 80px 0;
@@ -329,7 +280,7 @@ footer p {
         font-size: 1.2rem;
     }
 
-    .fees-grid, .cheerleader-gallery {
+    .fees-grid {
         grid-template-columns: 1fr;
     }
 }
