@@ -1,194 +1,263 @@
-/* style.css for FreedomXGames - NFL-themed, super purple gradient, cutting-edge UI */
-
 body {
-  margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(135deg, #3c1b5f 0%, #6d2b9e 100%);
-  color: #e0e0e0;
-  overflow-x: hidden;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #7b00ff, #b300ff, #e600ff);
+    background-size: 200% 200%;
+    animation: gradientShift 12s ease infinite;
+    color: #ffffff;
+    overflow-x: hidden;
 }
 
-header {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 30px;
-  text-align: center;
-  border-bottom: 3px solid #00ffcc;
-  box-shadow: 0 0 20px rgba(0, 255, 204, 0.7);
-}
-
-h1 {
-  font-size: 3em;
-  color: #00ffcc;
-  text-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc;
-  margin: 0;
-  letter-spacing: 2px;
-}
-
-nav {
-  margin: 20px 0;
-}
-
-nav a {
-  color: #66ffcc;
-  text-decoration: none;
-  margin: 0 20px;
-  font-size: 1.3em;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-nav a:hover {
-  color: #ff00ff;
-  text-shadow: 0 0 10px #ff00ff;
-  transform: translateY(-2px);
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Cutting-edge game choice boxes */
-.game-choices {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin: 40px 0;
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.game-box {
-  background: rgba(0, 0, 0, 0.6);
-  border: 2px solid #00ffcc;
-  border-radius: 15px;
-  padding: 20px;
-  width: 300px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+.x-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    color: #00ffdd;
+    text-shadow: 0 0 12px #00ffdd;
+    margin: 0;
 }
 
-.game-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 30px rgba(0, 255, 204, 0.8), 0 0 50px rgba(255, 0, 255, 0.5);
+.tagline {
+    font-size: 18px;
+    color: #d8bfff;
+    margin: 10px 0 20px;
 }
 
-.game-box h3 {
-  color: #ff00ff;
-  font-size: 1.6em;
-  text-shadow: 0 0 8px #ff00ff;
-  margin: 10px 0;
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.game-box p {
-  color: #e0e0e0;
-  font-size: 1.1em;
-  line-height: 1.5;
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    transition: color 0.3s;
 }
 
-.game-box button {
-  background: linear-gradient(45deg, #ff00ff, #00ffcc);
-  color: #fff;
-  border: none;
-  padding: 12px 25px;
-  font-size: 1.1em;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.game-box button:hover {
-  background: linear-gradient(45deg, #cc00cc, #00cc99);
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #ff00ff;
+nav a:hover {
+    color: #00ffdd;
+    text-shadow: 0 0 6px #00ffdd;
 }
 
 section {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid #66ffcc;
-  border-radius: 12px;
-  padding: 30px;
-  margin: 30px 0;
-  box-shadow: 0 0 20px rgba(102, 255, 204, 0.4);
+    padding: 60px 20px;
 }
 
 h2 {
-  color: #66ffcc;
-  font-size: 2em;
-  text-shadow: 0 0 8px #66ffcc;
-  margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #00ffdd;
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px #00ffdd;
 }
 
-p {
-  line-height: 1.7;
-  font-size: 1.2em;
+#hero {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 60px 20px;
+    margin: 20px auto;
+    max-width: 800px;
 }
 
-/* Payout table styling */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
+.hero-title {
+    font-size: 50px;
+    margin-bottom: 20px;
 }
 
-th, td {
-  padding: 12px;
-  text-align: left;
-  border: 1px solid #66ffcc;
+.hero-text {
+    font-size: 20px;
+    color: #d8bfff;
 }
 
-th {
-  background: #3c1b5f;
-  color: #00ffcc;
-  font-size: 1.2em;
+.fees-grid, .payouts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
 }
 
-td {
-  background: rgba(255, 255, 255, 0.05);
+.fee-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
 }
 
-/* NFL-themed button */
-.nfl-button {
-  background: linear-gradient(45deg, #00ffcc, #ff00ff);
-  color: #fff;
-  border: none;
-  padding: 15px 30px;
-  font-size: 1.2em;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+.fee-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 24px rgba(0, 255, 221, 0.4);
 }
 
-.nfl-button:hover {
-  background: linear-gradient(45deg, #00cc99, #cc00cc);
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #00ffcc;
+.fee-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 26px;
+    color: #00ffdd;
+    margin: 0 0 12px;
+}
+
+.fee-card .price {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.fee-card .description {
+    font-size: 16px;
+    color: #d8bfff;
+    margin: 0 0 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #00ffdd;
+    color: #1a0033;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background: #00ccbb;
+    transform: scale(1.06);
+}
+
+.payout-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.payout-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    color: #00ffdd;
+}
+
+.payout-card .price {
+    font-size: 26px;
+    color: #ffffff;
+}
+
+.payout-card .description {
+    font-size: 16px;
+    color: #d8bfff;
+}
+
+#scoring ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#scoring li {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.point-icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    margin-right: 12px;
+}
+
+.point-1 { background: #00ffdd; color: #1a0033; }
+.point-2 { background: #ff00dd; color: #ffffff; }
+.point-3 { background: #dd00ff; color: #ffffff; }
+
+#scoring strong {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+#scoring em {
+    color: #d8bfff;
+}
+
+.payout-example li {
+    font-size: 16px;
+    color: #d8bfff;
+    margin-bottom: 12px;
+}
+
+.highlight {
+    color: #00ffdd;
+    font-weight: 700;
+}
+
+.note {
+    font-size: 14px;
+    color: #cc99ff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#join {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 60px 20px;
+    margin: 20px auto;
+    max-width: 800px;
 }
 
 footer {
-  text-align: center;
-  padding: 30px;
-  background: rgba(0, 0, 0, 0.8);
-  border-top: 3px solid #00ffcc;
-  color: #e0e0e0;
-  margin-top: 30px;
-  box-shadow: 0 0 20px rgba(0, 255, 204, 0.7);
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.2em;
-  }
-  nav a {
-    font-size: 1.1em;
-    margin: 0 10px;
-  }
-  .container {
-    padding: 15px;
-  }
-  .game-box {
-    width: 100%;
-    max-width: 350px;
-  }
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #d8bfff;
 }
