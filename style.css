@@ -1,26 +1,27 @@
-/* style.css for FreedomXGames - Web3 aesthetic, purple gradient background, neon colors */
+/* style.css for FreedomXGames - NFL-themed, super purple gradient, cutting-edge UI */
 
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(135deg, #2a1a3e 0%, #4b2a6b 100%);
+  background: linear-gradient(135deg, #3c1b5f 0%, #6d2b9e 100%);
   color: #e0e0e0;
   overflow-x: hidden;
 }
 
 header {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
   text-align: center;
-  border-bottom: 2px solid #00ffcc;
-  box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+  border-bottom: 3px solid #00ffcc;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.7);
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 3em;
   color: #00ffcc;
-  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+  text-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc;
   margin: 0;
+  letter-spacing: 2px;
 }
 
 nav {
@@ -30,66 +31,97 @@ nav {
 nav a {
   color: #66ffcc;
   text-decoration: none;
-  margin: 0 15px;
-  font-size: 1.2em;
-  transition: color 0.3s ease;
+  margin: 0 20px;
+  font-size: 1.3em;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 nav a:hover {
   color: #ff00ff;
-  text-shadow: 0 0 8px #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+  transform: translateY(-2px);
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 30px;
+}
+
+/* Cutting-edge game choice boxes */
+.game-choices {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.game-box {
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #00ffcc;
+  border-radius: 15px;
   padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
 }
 
-section {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid #66ffcc;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 0 15px rgba(102, 255, 204, 0.3);
+.game-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(0, 255, 204, 0.8), 0 0 50px rgba(255, 0, 255, 0.5);
 }
 
-h2 {
-  color: #66ffcc;
-  font-size: 1.8em;
-  text-shadow: 0 0 5px #66ffcc;
+.game-box h3 {
+  color: #ff00ff;
+  font-size: 1.6em;
+  text-shadow: 0 0 8px #ff00ff;
+  margin: 10px 0;
 }
 
-p {
-  line-height: 1.6;
+.game-box p {
+  color: #e0e0e0;
   font-size: 1.1em;
+  line-height: 1.5;
 }
 
-button {
-  background: #ff00ff;
+.game-box button {
+  background: linear-gradient(45deg, #ff00ff, #00ffcc);
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  font-size: 1em;
-  border-radius: 5px;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
-  background: #cc00cc;
-  transform: scale(1.05);
-  box-shadow: 0 0 10px #ff00ff;
+.game-box button:hover {
+  background: linear-gradient(45deg, #cc00cc, #00cc99);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ff00ff;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.7);
-  border-top: 2px solid #00ffcc;
-  color: #e0e0e0;
-  margin-top: 20px;
+section {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid #66ffcc;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 30px 0;
+  box-shadow: 0 0 20px rgba(102, 255, 204, 0.4);
+}
+
+h2 {
+  color: #66ffcc;
+  font-size: 2em;
+  text-shadow: 0 0 8px #66ffcc;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.7;
+  font-size: 1.2em;
 }
 
 /* Payout table styling */
@@ -100,30 +132,63 @@ table {
 }
 
 th, td {
-  padding: 10px;
+  padding: 12px;
   text-align: left;
   border: 1px solid #66ffcc;
 }
 
 th {
-  background: #2a1a3e;
+  background: #3c1b5f;
   color: #00ffcc;
+  font-size: 1.2em;
 }
 
 td {
   background: rgba(255, 255, 255, 0.05);
 }
 
+/* NFL-themed button */
+.nfl-button {
+  background: linear-gradient(45deg, #00ffcc, #ff00ff);
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nfl-button:hover {
+  background: linear-gradient(45deg, #00cc99, #cc00cc);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.8);
+  border-top: 3px solid #00ffcc;
+  color: #e0e0e0;
+  margin-top: 30px;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.7);
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   h1 {
-    font-size: 2em;
+    font-size: 2.2em;
   }
   nav a {
-    font-size: 1em;
+    font-size: 1.1em;
     margin: 0 10px;
   }
   .container {
-    padding: 10px;
+    padding: 15px;
+  }
+  .game-box {
+    width: 100%;
+    max-width: 350px;
   }
 }
