@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FreedomXGames - Season Leaderboard">
     <title>FreedomXGames - Leaderboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Orbitron:wght@700;900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
-            <a href="index.html"><h1 class="x-logo">FreedomXGames</h1></a>
-            <p class="tagline">Where the Sharpest Minds in Football Come to Play</p>
+            <div>
+                <h1 class="x-logo">FreedomXGames</h1>
+                <div class="tagline">Where the Sharpest Minds in Football Come to Play</div>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="index.html#entry-fees">Entry Fees</a></li>
                     <li><a href="index.html#weekly-contest">Weekly Contest</a></li>
                     <li><a href="index.html#scoring">Scoring Rules</a></li>
-                    <li><a href="index.html#payouts">Payouts</a></li>
                     <li><a href="leaderboard.html">Leaderboard</a></li>
+                    <li><a href="index.html#join">Join</a></li>
+                    <li><a href="index.html#payouts">Payouts</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,50 +32,92 @@
 
     <section id="leaderboard">
         <div class="container">
-            <h2>Leaderboard</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>User Name</th>
-                        <th>Points</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>ProGamer123</td>
-                        <td>1500</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>FootballFanatic</td>
-                        <td>1450</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>SemiProStar</td>
-                        <td>1400</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>CasualPlayer</td>
-                        <td>1350</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Newbie</td>
-                        <td>1300</td>
-                    </tr>
-                </tbody>
-            </table>
+            <h2>Season Leaderboard</h2>
+            <div class="leaderboard-grid">
+                <div class="leaderboard-card">
+                    <h3>Fan Division</h3>
+                    <table class="leaderboard-table" id="fan-leaderboard">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Points</th>
+                                <th>Wins</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="leaderboard-card">
+                    <h3>Semi-Pro Division</h3>
+                    <table class="leaderboard-table" id="semipro-leaderboard">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Points</th>
+                                <th>Wins</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="leaderboard-card">
+                    <h3>Pro Player Division</h3>
+                    <table class="leaderboard-table" id="proplayer-leaderboard">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Points</th>
+                                <th>Wins</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="leaderboard-card">
+                    <h3>Weekly Contest</h3>
+                    <table class="leaderboard-table" id="weeklycontest-leaderboard">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Points</th>
+                                <th>Wins</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p class="note">*Leaderboards reflect season-long performance. Rankings are updated weekly based on total points and wins.</p>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>© 2025 FreedomXGames. All rights reserved.</p>
+            <p>© 2025 FreedomXGames. All rights reserved. | America's Simple Strategy Football Game</p>
         </div>
     </footer>
+
+    <script src="leaderboard.js"></script>
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetUrl = this.getAttribute('href');
+                window.location.href = targetUrl; // Navigate to the target page/section
+            });
+        });
+    </script>
 </body>
 </html>
