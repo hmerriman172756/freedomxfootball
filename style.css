@@ -1,28 +1,20 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #7b00ff, #b300ff, #e600ff);
-    background-size: 200% 200%;
-    animation: gradientShift 12s ease infinite;
+    background: #8b5cf6; /* Solid purple background */
     color: #ffffff;
     overflow-x: hidden;
-}
-
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px; /* Further reduced padding */
+    padding: 10px;
 }
 
 header {
     text-align: center;
-    padding: 15px 10px; /* Further reduced padding */
+    padding: 15px 10px;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -30,7 +22,7 @@ header {
 
 .x-logo {
     font-family: 'Orbitron', sans-serif;
-    font-size: 36px; /* Slightly smaller */
+    font-size: 36px;
     font-weight: 900;
     color: #00ffdd;
     text-shadow: 0 0 12px #00ffdd;
@@ -38,9 +30,9 @@ header {
 }
 
 .tagline {
-    font-size: 14px; /* Smaller */
+    font-size: 14px;
     color: #d8bfff;
-    margin: 5px 0 8px; /* Tighter margins */
+    margin: 5px 0 8px;
 }
 
 nav ul {
@@ -48,7 +40,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 12px; /* Reduced gap */
+    gap: 12px;
 }
 
 nav a {
@@ -56,7 +48,7 @@ nav a {
     text-decoration: none;
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
-    font-size: 13px; /* Smaller */
+    font-size: 13px;
     transition: color 0.3s;
 }
 
@@ -66,120 +58,104 @@ nav a:hover {
 }
 
 section {
-    padding: 30px 10px; /* Further reduced padding */
+    padding: 30px 10px;
 }
 
 h2 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 28px; /* Smaller */
+    font-size: 28px;
     font-weight: 700;
     color: #00ffdd;
     text-align: center;
-    margin-bottom: 15px; /* Reduced margin */
+    margin-bottom: 15px;
     text-shadow: 0 0 10px #00ffdd;
 }
 
 #hero {
     text-align: center;
     background: rgba(0, 0, 0, 0.25);
-    border-radius: 12px; /* Smaller radius */
-    padding: 30px 10px; /* Further reduced padding */
-    margin: 8px auto; /* Reduced margin */
+    border-radius: 12px;
+    padding: 30px 10px;
+    margin: 8px auto;
     max-width: 800px;
 }
 
 .hero-title {
-    font-size: 36px; /* Smaller */
-    margin-bottom: 12px; /* Reduced margin */
+    font-size: 36px;
+    margin-bottom: 12px;
 }
 
 .hero-text {
-    font-size: 16px; /* Smaller */
+    font-size: 16px;
     color: #d8bfff;
+}
+
+.strategy-tagline {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    color: #00ffdd;
+    text-shadow: 0 0 6px #00ffdd;
+    margin-top: 8px;
 }
 
 .fees-grid, .payouts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Smaller min width */
-    gap: 12px; /* Reduced gap */
-    margin-top: 12px; /* Reduced margin */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin-top: 12px;
 }
 
-.fee-card {
+.fee-card, .payout-card {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 12px; /* Smaller radius */
-    padding: 15px; /* Reduced padding */
+    border-radius: 12px;
+    padding: 15px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
 
-.fee-card:hover {
-    transform: translateY(-6px); /* Smaller lift */
+.fee-card:hover, .payout-card:hover {
+    transform: translateY(-6px);
     box-shadow: 0 6px 12px rgba(0, 255, 221, 0.4);
 }
 
-.fee-card h3 {
+.fee-card h3, .payout-card h3 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 20px; /* Smaller */
+    font-size: 20px;
     color: #00ffdd;
-    margin: 0 0 6px; /* Reduced margin */
+    margin: 0 0 6px;
 }
 
-.fee-card .price {
-    font-size: 24px; /* Smaller */
+.fee-card .price, .payout-card .price {
+    font-size: 24px;
     font-weight: 700;
     color: #ffffff;
-    margin: 6px 0; /* Reduced margin */
+    margin: 6px 0;
 }
 
-.fee-card .description {
-    font-size: 13px; /* Smaller */
+.fee-card .description, .payout-card .description {
+    font-size: 13px;
     color: #d8bfff;
-    margin: 0 0 12px; /* Reduced margin */
+    margin: 0 0 12px;
 }
 
 .cta-button {
     display: inline-block;
-    padding: 8px 18px; /* Smaller padding */
+    padding: 8px 18px;
     background: #00ffdd;
     color: #1a0033;
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
     text-decoration: none;
-    border-radius: 8px; /* Smaller radius */
+    border-radius: 8px;
     transition: background 0.3s, transform 0.3s;
 }
 
 .cta-button:hover {
     background: #00ccbb;
-    transform: scale(1.03); /* Smaller scale */
-}
-
-.payout-card {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 8px; /* Smaller radius */
-    padding: 12px; /* Reduced padding */
-    text-align: center;
-}
-
-.payout-card h3 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 18px; /* Smaller */
-    color: #00ffdd;
-}
-
-.payout-card .price {
-    font-size: 20px; /* Smaller */
-    color: #ffffff;
-}
-
-.payout-card .description {
-    font-size: 13px; /* Smaller */
-    color: #d8bfff;
+    transform: scale(1.03);
 }
 
 #scoring ul {
@@ -192,21 +168,21 @@ h2 {
 #scoring li {
     background: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 8px; /* Smaller radius */
-    padding: 12px; /* Reduced padding */
-    margin-bottom: 12px; /* Reduced margin */
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
 }
 
 .point-icon {
     display: inline-block;
-    width: 60px; /* Wider for "Tier X" */
+    width: 60px;
     height: 40px;
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
     font-weight: 700;
     margin-right: 10px;
-    font-size: 14px; /* Adjusted for "Tier X" */
+    font-size: 14px;
 }
 
 .point-a { background: #00ffdd; color: #1a0033; }
@@ -215,19 +191,19 @@ h2 {
 
 #scoring strong {
     font-family: 'Orbitron', sans-serif;
-    font-size: 15px; /* Smaller */
+    font-size: 15px;
     color: #ffffff;
 }
 
 #scoring em {
     color: #d8bfff;
-    font-size: 13px; /* Smaller */
+    font-size: 13px;
 }
 
 .payout-example li {
-    font-size: 13px; /* Smaller */
+    font-size: 1.2rem; /* Larger font size for payout examples */
     color: #d8bfff;
-    margin-bottom: 6px; /* Reduced margin */
+    margin-bottom: 6px;
 }
 
 .highlight {
@@ -236,30 +212,28 @@ h2 {
 }
 
 .note {
-    font-size: 11px; /* Smaller */
+    font-size: 11px;
     color: #cc99ff;
     text-align: center;
-    margin-top: 12px; /* Reduced margin */
+    margin-top: 12px;
 }
 
 #join {
     text-align: center;
     background: rgba(0, 0, 0, 0.25);
-    border-radius: 12px; /* Smaller radius */
-    padding: 30px 10px; /* Reduced padding */
-    margin: 8px auto; /* Reduced margin */
+    border-radius: 12px;
+    padding: 30px 10px;
+    margin: 8px auto;
     max-width: 800px;
 }
 
 footer {
+    background: #F7931A; /* Bitcoin orange */
+    padding: 12px;
     text-align: center;
-    padding: 12px; /* Reduced padding */
-    background: rgba(0, 0, 0, 0.4);
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 footer p {
-    margin: 0;
-    font-size: 11px; /* Smaller */
-    color: #d8bfff;
+    color: #ffffff; /* White text for contrast */
+    font-size: 11px;
 }
