@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreedomXGames - Where the Sharpest Minds in Football Come to Play</title>
+    <meta name="description" content="FreedomXGames - Ultimate football gaming platform">
+    <title>FreedomXGames</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Orbitron:wght@700;900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1 class="x-logo">FreedomXGames</h1>
-            <p class="tagline">Where the Sharpest Minds in Football Come to Play</p>
+            <div>
+                <h1 class="x-logo">FreedomXGames</h1>
+                <div class="tagline">Where the Sharpest Minds in Football Come to Play</div>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#entry-fees">Entry Fees</a></li>
                     <li><a href="#weekly-contest">Weekly Contest</a></li>
                     <li><a href="#scoring">Scoring Rules</a></li>
+                    <li><a href="#leaderboard">Leaderboard</a></li>
+                    <li><a href="#join">Join</a></li>
                     <li><a href="#payouts">Payouts</a></li>
-                    <li><a href="leaderboard.html">Leaderboard</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,14 +33,15 @@
     <section id="hero">
         <div class="container">
             <h2 class="hero-title">Join the Ultimate Football Experience</h2>
-            <p class="hero-text">Step into the Web3 arena of FreedomXGames, where strategy, skill, and swagger collide!</p>
+            <p class="hero-text">Step into the arena of FreedomXGames, where strategy, skill, and swagger collide!</p>
+            <p class="strategy-tagline">America's Simple Strategy Football Game</p>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
             <h2>About FreedomXGames</h2>
-            <p>FreedomXGames is a cutting-edge, Web3-powered football game uniting fans, semi-pros, and pros in a futuristic arena. Compete, strategize, and dominate with blockchain-backed rewards.</p>
+            <p>FreedomXGames is a cutting-edge football game uniting fans, semi-pros, and pros in a competitive arena. Compete, strategize, and dominate to win exciting rewards.</p>
         </div>
     </section>
 
@@ -45,21 +51,21 @@
             <div class="fees-grid">
                 <div class="fee-card">
                     <h3>Fan</h3>
-                    <p class="price">$250 <span class="venmo-icon" title="Payments via Venmo">💸</span></p>
-                    <p class="description">Test your skills as a casual player.</p>
-                    <a href="#" class="cta-button">Enter Now</a>
+                    <div class="price">$250 💸</div>
+                    <div class="description">Test your skills as a casual player.</div>
+                    <a class="cta-button">Enter Now</a>
                 </div>
                 <div class="fee-card">
                     <h3>Semi-Pro</h3>
-                    <p class="price">$500 <span class="venmo-icon" title="Payments via Venmo">💸</span></p>
-                    <p class="description">Step up your game with higher stakes.</p>
-                    <a href="#" class="cta-button">Enter Now</a>
+                    <div class="price">$500 💸</div>
+                    <div class="description">Step up your game with higher stakes.</div>
+                    <a class="cta-button">Enter Now</a>
                 </div>
                 <div class="fee-card">
                     <h3>Pro Player</h3>
-                    <p class="price">$1000 <span class="venmo-icon" title="Payments via Venmo">💸</span></p>
-                    <p class="description">Compete with the elite for top rewards.</p>
-                    <a href="#" class="cta-button">Enter Now</a>
+                    <div class="price">$1000 💸</div>
+                    <div class="description">Compete with the elite for top rewards.</div>
+                    <a class="cta-button">Enter Now</a>
                 </div>
             </div>
         </div>
@@ -68,16 +74,18 @@
     <section id="weekly-contest">
         <div class="container">
             <h2>Weekly Contest</h2>
-            <div class="contest-card">
-                <h3>New! $50 Weekly Contest</h3>
-                <p class="contest-description">Join our exciting weekly contest for a chance to win big! Enter for just $50 and compete for weekly payouts.</p>
-                <ul class="contest-details">
-                    <li><strong>Entry Fee:</strong> $50 <span class="venmo-icon" title="Payments via Venmo">💸</span></li>
-                    <li><strong>Payout:</strong> After each week</li>
-                    <li><strong>Tiebreaker:</strong> Closest to MNF score without going over</li>
-                    <li class="important"><strong>Points Rule:</strong> No points for ties</li>
-                </ul>
-                <a href="#" class="cta-button">Enter Now</a>
+            <div class="payouts-grid">
+                <div class="payout-card">
+                    <h3>New! $50 Weekly Contest</h3>
+                    <p>Join our exciting weekly contest for a chance to win big! Enter for just $50 and compete for weekly payouts.</p>
+                    <ul>
+                        <li>Entry Fee: $50 💸</li>
+                        <li>Payout: After each week via Venmo</li>
+                        <li>Tiebreaker: Closest to MNF score without going over</li>
+                        <li>Points Rule: No points for ties</li>
+                    </ul>
+                    <a class="cta-button">Enter Now</a>
+                </div>
             </div>
         </div>
     </section>
@@ -85,15 +93,147 @@
     <section id="scoring">
         <div class="container">
             <h2>Scoring Rules</h2>
-            <p class="important-note">Important: No points are awarded for ties in any scoring category.</p>
+            <p>Important: No points are awarded for ties in any scoring category.</p>
             <ul>
-                <li><span class="point-icon point-1">1</span><strong>1 Point – Straight-Up Win</strong><br>
+                <li>
+                    <span class="point-icon point-a">1</span>
+                    <strong>1 Point – Straight-Up Win</strong><br>
                     Pick a team to win, no spread. Popular but low reward.<br>
                     <em>Win: +1 point</em>
                 </li>
-                <li><span class="point-icon point-2">2</span><strong>2 Points – Win With the Spread</strong><br>
+                <li>
+                    <span class="point-icon point-b">2</span>
+                    <strong>2 Points – Win With the Spread</strong><br>
                     Pick a team to win or cover the spread.<br>
-                    <em>Example: Underdog +7 loses by <7 or wins: +2 points</em>
+                    <em>Example: Underdog +7 loses by <7 or wins; no points for a tie</em>
                 </li>
-                <li><span class="point-icon point-3">3</span><strong>3 Points – Underdog Wins Straight-Up</strong><br>
-                    Pick
+                <li>
+                    <span class="point-icon point-c">3</span>
+                    <strong>3 Points – Underdog Wins Straight-Up</strong><br>
+                    Pick an underdog to win outright, no spread. High risk, high reward.<br>
+                    <em>Win: +3 points</em>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="leaderboard">
+        <div class="container">
+            <h2>Season Leaderboard</h2>
+            <div class="leaderboard-grid">
+                <div class="leaderboard-card">
+                    <h3>Fan Division</h3>
+                    <table class="leaderboard-table" id="fan-leaderboard">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Points</th>
+                                <th>Wins</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="leaderboard-card">
+                    <h3>Semi-Pro Division</h3>
+                    <table class="leaderboard-table" id="semipro-leaderboard">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Points</th>
+                                <th>Wins</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="leaderboard-card">
+                    <h3>Pro Player Division</h3>
+                    <table class="leaderboard-table" id="proplayer-leaderboard">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Points</th>
+                                <th>Wins</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="leaderboard-card">
+                    <h3>Weekly Contest</h3>
+                    <table class="leaderboard-table" id="weeklycontest-leaderboard">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Points</th>
+                                <th>Wins</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p class="note">*Leaderboards reflect season-long performance. Rankings are updated weekly based on total points and wins.</p>
+        </div>
+    </section>
+
+    <section id="join">
+        <div class="container">
+            <h2>Join the Game</h2>
+            <p>Ready to rule the field? Sign up and join the football revolution!</p>
+            <a class="cta-button">Sign Up</a>
+        </div>
+    </section>
+
+    <section id="payouts">
+        <div class="container">
+            <h2>Payouts</h2>
+            <p>Top 25% of players in each division split 75% of the total pot, with higher scorers earning larger shares. In case of a points tie at the end of the 18-week season, the tiebreaker is the player who was in the lead for the most weeks during the season.</p>
+            <h3>Example Payouts (100 Players per Division)</h3>
+            <ul class="payout-example">
+                <li><strong>Fan Division:</strong> 100 players × $250 = $25,000 pot. Top 25 split 75% ($18,750). Approx: <span class="highlight">1st: $3,750</span>, 2nd: $2,625, 3rd: $1,875, 4th-10th: $625 each, 11th-25th: $250 each.</li>
+                <li><strong>Semi-Pro Division:</strong> 100 players × $500 = $50,000 pot. Top 25 split 75% ($37,500). Approx: <span class="highlight">1st: $7,500</span>, 2nd: $5,250, 3rd: $3,750, 4th-10th: $1,250 each, 11th-25th: $500 each.</li>
+                <li><strong>Pro Player Division:</strong> 100 players × $1,000 = $100,000 pot. Top 25 split 75% ($75,000). Approx: <span class="highlight">1st: $15,000</span>, 2nd: $10,500, 3rd: $7,500, 4th-10th: $2,500 each, 11th-25th: $1,000 each.</li>
+            </ul>
+            <p class="note">*Payouts are distributed via Venmo after each season, based on the exact distribution formula.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 FreedomXGames. All rights reserved. | America's Simple Strategy Football Game</p>
+        </div>
+    </footer>
+
+    <script src="leaderboard.js"></script>
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Sign-up form coming soon! Contact us to join FreedomXGames.');
+            });
+        });
+    </script>
+</body>
+</html>
