@@ -8,19 +8,51 @@
 </head>
 <body>
     <div class="container">
-        <h1>FreedomX Games</h1>
-        <div id="game-area">
-            <canvas id="particle-canvas"></canvas>
-            <div id="game-content">
-                <h2>Play Now</h2>
-                <button id="start-game">Start Game</button>
-                <div id="payout-info">
-                    <h3>Payout Structure</h3>
-                    <p>Top 25% of players split 75% of the pot. Remaining 25% goes to the next 50% of players. Bottom 25% receive no payout.</p>
-                    <div id="example-payout"></div>
+        <nav class="navbar">
+            <div class="logo">FreedomX Games</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#play">Play</a></li>
+                <li><a href="#leaderboard">Leaderboard</a></li>
+                <li><a href="#profile">Profile</a></li>
+            </ul>
+        </nav>
+        <section id="home">
+            <div id="game-area">
+                <canvas id="particle-canvas"></canvas>
+                <div id="game-content">
+                    <h1>Welcome to FreedomX Games</h1>
+                    <p>Compete, win, and claim your share of the pot in our Web3 gaming platform!</p>
+                    <button id="start-game">Start Game</button>
+                    <div id="payout-info">
+                        <h3>Payout Structure</h3>
+                        <p>Top 50% of players split the entire pot. Bottom 50% receive no payout.</p>
+                        <div id="example-payout"></div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <section id="leaderboard">
+            <h2>Leaderboard</h2>
+            <div id="leaderboard-content">
+                <p>Top players will be displayed here after the game starts.</p>
+            </div>
+        </section>
+        <section id="profile">
+            <h2>User Profile</h2>
+            <div id="profile-content">
+                <p>Login to view your stats, winnings, and game history.</p>
+                <button id="login-button">Login</button>
+            </div>
+        </section>
+        <footer>
+            <p>© 2025 FreedomX Games. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">Discord</a>
+                <a href="#">GitHub</a>
+            </div>
+        </footer>
     </div>
     <script>
         // Particle effect for Web3 aesthetic
@@ -73,16 +105,11 @@
         // Payout calculation
         function calculatePayouts(players, pot) {
             const sortedPlayers = players.sort((a, b) => b.score - a.score);
-            const top25Percent = Math.ceil(players.length * 0.25);
-            const next50Percent = Math.floor(players.length * 0.50);
-            const topPot = pot * 0.75;
-            const nextPot = pot * 0.25;
+            const top50Percent = Math.ceil(players.length * 0.50);
             let payouts = [];
             for (let i = 0; i < sortedPlayers.length; i++) {
-                if (i < top25Percent) {
-                    payouts.push({ player: sortedPlayers[i].name, payout: (topPot / top25Percent).toFixed(2) });
-                } else if (i < top25Percent + next50Percent) {
-                    payouts.push({ player: sortedPlayers[i].name, payout: (nextPot / next50Percent).toFixed(2) });
+                if (i < top50Percent) {
+                    payouts.push({ player: sortedPlayers[i].name, payout: (pot / top50Percent).toFixed(2) });
                 } else {
                     payouts.push({ player: sortedPlayers[i].name, payout: 0 });
                 }
@@ -109,9 +136,12 @@
             payoutDiv.innerHTML += `<p>${p.player}: $${p.payout}</p>`;
         });
 
-        // Game start button (placeholder)
+        // Game start and login buttons (placeholders)
         document.getElementById('start-game').addEventListener('click', () => {
             alert('Game starting soon! Check back for updates.');
+        });
+        document.getElementById('login-button').addEventListener('click', () => {
+            alert('Login functionality coming soon!');
         });
     </script>
 </body>
