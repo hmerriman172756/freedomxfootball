@@ -89,7 +89,7 @@
                     <span class="point-icon point-b">2</span>
                     <strong>2 Points – Win With the Spread</strong><br>
                     <em>Pick a team to win or cover the spread.</em><br>
-                    <em>Example: Underdog +7 loses by </em>
+                    <em>Example: Underdog +7 loses by 3, you win.</em>
                 </li>
                 <li>
                     <span class="point-icon point-c">3</span>
@@ -145,79 +145,4 @@
                 </div>
                 <div class="payout-card">
                     <h3>🏈Pro Player Division</h3>
-                    <p class="description">100 players × $1,000 = $100,000 pot. Approx: <span style="color: #ff00dd;">1st: $15,000</span>, 2nd: $10,500, 3rd: $7,500, 4th-10th: $2,500 each, 11th-25th: $1,000 each.</p>
-                </div>
-            </div>
-            <p class="note">*Payouts are distributed via Venmo after each season, based on the exact distribution formula.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2025 FreedomXFootball. All rights reserved. | America's Simple Strategy Football Game</p>
-    </footer>
-
-    <canvas id="particles"></canvas>
-    <script>
-        (function() {
-            try {
-                const canvas = document.getElementById('particles');
-                const ctx = canvas.getContext('2d');
-                if (!ctx) return; // Exit if canvas context is not supported
-
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-
-                const particles = [];
-                const particleCount = 50; // Reduced for performance
-
-                class Particle {
-                    constructor() {
-                        this.x = Math.random() * canvas.width;
-                        this.y = Math.random() * canvas.height;
-                        this.size = Math.random() * 2 + 1;
-                        this.speedX = Math.random() * 0.3 - 0.15;
-                        this.speedY = Math.random() * 0.3 - 0.15;
-                    }
-                    update() {
-                        this.x += this.speedX;
-                        this.y += this.speedY;
-                        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-                        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-                    }
-                    draw() {
-                        ctx.fillStyle = 'rgba(0, 255, 221, 0.4)';
-                        ctx.beginPath();
-                        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                        ctx.fill();
-                    }
-                }
-
-                function init() {
-                    for (let i = 0; i < particleCount; i++) {
-                        particles.push(new Particle());
-                    }
-                }
-
-                function animate() {
-                    ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    particles.forEach(particle => {
-                        particle.update();
-                        particle.draw();
-                    });
-                    requestAnimationFrame(animate);
-                }
-
-                init();
-                animate();
-
-                window.addEventListener('resize', () => {
-                    canvas.width = window.innerWidth;
-                    canvas.height = window.innerHeight;
-                });
-            } catch (e) {
-                console.warn('Particle animation failed to load:', e);
-            }
-        })();
-    </script>
-</body>
-</html>
+                    <p class="description">100 players × $1,000 = $100,000 pot. Approx: <span style="color: #ff00dd;">1st: $15,000</span>, 2nd: $10,500, 3rd: $7,500, 4th-10th: $2,500 each, 11th
