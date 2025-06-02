@@ -1,0 +1,198 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreedomXFootball</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="x-logo">FreedomXFootball</h1>
+        <p class="tagline">Where the Sharpest Minds in Football Come to Play</p>
+        <nav>
+            <ul>
+                <li><a href="#about">🏈About</a></li>
+                <li><a href="#fees">🏈Entry Fees</a></li>
+                <li><a href="#weekly">🏈Weekly Contest</a></li>
+                <li><a href="#scoring">🏈Scoring Rules</a></li>
+                <li><a href="#leaderboard">🏈Leaderboard</a></li>
+                <li><a href="#payouts">🏈Payouts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="hero">
+            <h2 class="hero-title">Join the Ultimate Football Experience</h2>
+            <p class="hero-text">Step into the arena of FreedomXFootball, where strategy, skill, and swagger collide!</p>
+        </section>
+
+        <section id="about">
+            <h2>About FreedomXFootball</h2>
+            <p>FreedomXFootball is a cutting-edge football game uniting fans, semi-pros, and pros in a competitive arena. Compete, strategize, and dominate to win exciting rewards.</p>
+        </section>
+
+        <section id="fees">
+            <h2>Entry Fees</h2>
+            <div class="fees-grid">
+                <div class="fee-card">
+                    <h3>🏈Fan</h3>
+                    <p class="price">$250 💸</p>
+                    <p class="description">Test your skills as a casual player.</p>
+                    <a href="#" class="cta-button">Enter Now</a>
+                </div>
+                <div class="fee-card">
+                    <h3>🏈Semi-Pro</h3>
+                    <p class="price">$500 💸</p>
+                    <p class="description">Step up your game with higher stakes.</p>
+                    <a href="#" class="cta-button">Enter Now</a>
+                </div>
+                <div class="fee-card">
+                    <h3>🏈Pro Player</h3>
+                    <p class="price">$1000 💸</p>
+                    <p class="description">Compete with the elite for top rewards.</p>
+                    <a href="#" class="cta-button">Enter Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="weekly">
+            <h2>Weekly Contest</h2>
+            <div class="fees-grid">
+                <div class="fee-card">
+                    <h3>🏈New! $50 Weekly Contest</h3>
+                    <p class="description">
+                        Join our exciting weekly contest for a chance to win big! Enter for just <strong>$50</strong> and compete for weekly payouts.<br>
+                        <strong>Entry Fee:</strong> $50 💸<br>
+                        <strong>Payout:</strong> After each week via Venmo<br>
+                        <strong>Tiebreaker:</strong> Closest to MNF score without going over<br>
+                        <strong>Points Rule:</strong> No points for ties
+                    </p>
+                    <a href="#" class="cta-button">Enter Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="scoring">
+            <h2>Scoring Rules</h2>
+            <p class="note">Important: No points are awarded for ties in any scoring category.</p>
+            <ul>
+                <li>
+                    <span class="point-icon point-a">1</span>
+                    <strong>1 Point – Straight-Up Win</strong><br>
+                    <em>Pick a team to win, no spread. Popular but low reward.</em><br>
+                    <em>Win: +1 point</em>
+                </li>
+                <li>
+                    <span class="point-icon point-b">2</span>
+                    <strong>2 Points – Win With the Spread</strong><br>
+                    <em>Pick a team to win or cover the spread.</em><br>
+                    <em>Example: Underdog +7 loses by </em>
+                </li>
+                <li>
+                    <span class="point-icon point-c">3</span>
+                    <strong>3 Points – Underdog Wins Straight-Up</strong><br>
+                    <em>Pick an underdog to win outright, no spread. High risk, high reward.</em><br>
+                    <em>Win: +3 points</em>
+                </li>
+            </ul>
+        </section>
+
+        <section id="leaderboard">
+            <h2>Season Leaderboard</h2>
+            <div class="fees-grid">
+                <div class="payout-card">
+                    <h3>🏈Fan Division</h3>
+                    <table>
+                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
+                    </table>
+                </div>
+                <div class="payout-card">
+                    <h3>🏈Semi-Pro Division</h3>
+                    <table>
+                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
+                    </table>
+                </div>
+                <div class="payout-card">
+                    <h3>🏈Pro Player Division</h3>
+                    <table>
+                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
+                    </table>
+                </div>
+                <div class="payout-card">
+                    <h3>🏈Weekly Contest</h3>
+                    <table>
+                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
+                    </table>
+                </div>
+            </div>
+            <p class="note">*Leaderboards reflect season-long performance. Rankings are updated weekly based on total points and wins.</p>
+        </section>
+
+        <section id="payouts">
+            <h2>Payouts</h2>
+            <p><strong>Top 25% of players in each division split the total pot</strong>, with <span style="color: #ff00dd;">1st place</span> winners earning larger shares. In case of a points tie at the end of the 18-week season, the tiebreaker is the player who was in the lead for the most weeks during the season.</p>
+            <div class="payouts-grid">
+                <div class="payout-card">
+                    <h3>🏈Fan Division</h3>
+                    <p class="description">100 players × $250 = $25,000 pot. Approx: <span style="color: #ff00dd;">1st: $3,750</span>, 2nd: $2,625, 3rd: $1,875, 4th-10th: $625 each, 11th-25th: $250 each.</p>
+                </div>
+                <div class="payout-card">
+                    <h3>🏈Semi-Pro Division</h3>
+                    <p class="description">100 players × $500 = $50,000 pot. Approx: <span style="color: #ff00dd;">1st: $7,500</span>, 2nd: $5,250, 3rd: $3,750, 4th-10th: $1,250 each, 11th-25th: $500 each.</p>
+                </div>
+                <div class="payout-card">
+                    <h3>🏈Pro Player Division</h3>
+                    <p class="description">100 players × $1,000 = $100,000 pot. Approx: <span style="color: #ff00dd;">1st: $15,000</span>, 2nd: $10,500, 3rd: $7,500, 4th-10th: $2,500 each, 11th-25th: $1,000 each.</p>
+                </div>
+            </div>
+            <p class="note">*Payouts are distributed via Venmo after each season, based on the exact distribution formula.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 FreedomXFootball. All rights reserved. | America's Simple Strategy Football Game</p>
+    </footer>
+</body>
+</html>
