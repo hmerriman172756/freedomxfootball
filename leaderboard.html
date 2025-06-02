@@ -3,121 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FreedomXGames - Season Leaderboard">
-    <title>FreedomXGames - Leaderboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <title>FreedomXFootball - Leaderboard</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Orbitron:wght@700;900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="container">
-            <div>
-                <h1 class="x-logo">FreedomXGames</h1>
-                <div class="tagline">Where the Sharpest Minds in Football Come to Play</div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#entry-fees">Entry Fees</a></li>
-                    <li><a href="index.html#weekly-contest">Weekly Contest</a></li>
-                    <li><a href="index.html#scoring">Scoring Rules</a></li>
-                    <li><a href="leaderboard.html">Leaderboard</a></li>
-                    <li><a href="index.html#join">Join</a></li>
-                    <li><a href="index.html#payouts">Payouts</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1 class="x-logo" aria-label="FreedomXFootball Logo">FreedomXFootball</h1>
+        <p class="tagline">Where the Sharpest Minds in Football Come to Play</p>
+        <nav>
+            <ul>
+                <li><a href="#about">🏈About</a></li>
+                <li><a href="#entry-fees">🏈Entry Fees</a></li>
+                <li><a href="#weekly-contest">🏈Weekly Contest</a></li>
+                <li><a href="#scoring">🏈Scoring Rules</a></li>
+                <li><a href="#leaderboard" class="active">🏈Leaderboard</a></li>
+                <li><a href="#join">🏈Join</a></li>
+                <li><a href="#payouts">🏈Payouts</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="leaderboard">
-        <div class="container">
+    <main>
+        <section id="leaderboard">
             <h2>Season Leaderboard</h2>
-            <div class="leaderboard-grid">
-                <div class="leaderboard-card">
-                    <h3>Fan Division</h3>
-                    <table class="leaderboard-table" id="fan-leaderboard">
-                        <thead>
-                            <tr>
-                                <th>Rank</th>
-                                <th>Player</th>
-                                <th>Points</th>
-                                <th>Wins</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Data will be populated dynamically -->
-                        </tbody>
+            <div class="fees-grid">
+                <div class="payout-card">
+                    <h3>🏈Fan Division</h3>
+                    <table>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Points</th>
+                            <th>Wins</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="text-align: center; color: #d8bfff;">Leaderboard updates weekly. Check back for rankings!</td>
+                        </tr>
                     </table>
                 </div>
-                <div class="leaderboard-card">
-                    <h3>Semi-Pro Division</h3>
-                    <table class="leaderboard-table" id="semipro-leaderboard">
-                        <thead>
-                            <tr>
-                                <th>Rank</th>
-                                <th>Player</th>
-                                <th>Points</th>
-                                <th>Wins</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Data will be populated dynamically -->
-                        </tbody>
+                <div class="payout-card">
+                    <h3>🏈Semi-Pro Division</h3>
+                    <table>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Points</th>
+                            <th>Wins</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="text-align: center; color: #d8bfff;">Leaderboard updates weekly. Check back for rankings!</td>
+                        </tr>
                     </table>
                 </div>
-                <div class="leaderboard-card">
-                    <h3>Pro Player Division</h3>
-                    <table class="leaderboard-table" id="proplayer-leaderboard">
-                        <thead>
-                            <tr>
-                                <th>Rank</th>
-                                <th>Player</th>
-                                <th>Points</th>
-                                <th>Wins</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Data will be populated dynamically -->
-                        </tbody>
+                <div class="payout-card">
+                    <h3>🏈Pro Player Division</h3>
+                    <table>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Points</th>
+                            <th>Wins</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="text-align: center; color: #d8bfff;">Leaderboard updates weekly. Check back for rankings!</td>
+                        </tr>
                     </table>
                 </div>
-                <div class="leaderboard-card">
-                    <h3>Weekly Contest</h3>
-                    <table class="leaderboard-table" id="weeklycontest-leaderboard">
-                        <thead>
-                            <tr>
-                                <th>Rank</th>
-                                <th>Player</th>
-                                <th>Points</th>
-                                <th>Wins</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Data will be populated dynamically -->
-                        </tbody>
+                <div class="payout-card">
+                    <h3>🏈Weekly Contest</h3>
+                    <table>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Points</th>
+                            <th>Wins</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="text-align: center; color: #d8bfff;">Leaderboard updates weekly. Check back for rankings!</td>
+                        </tr>
                     </table>
                 </div>
             </div>
             <p class="note">*Leaderboards reflect season-long performance. Rankings are updated weekly based on total points and wins.</p>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <div class="container">
-            <p>© 2025 FreedomXGames. All rights reserved. | America's Simple Strategy Football Game</p>
-        </div>
+        <p>© <span id="current-year"></span> FreedomXFootball. All rights reserved. | America's Simple Strategy Football Game</p>
     </footer>
 
-    <script src="leaderboard.js"></script>
     <script>
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetUrl = this.getAttribute('href');
-                window.location.href = targetUrl; // Navigate to the target page/section
-            });
-        });
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
