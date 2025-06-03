@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreedomXGames</title>
+    <title>FreedomXFootball</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.943.0.min.js"></script>
+    <script src="https://unpkg.com/@aws-amplify/auth@4.5.0/dist/aws-amplify-auth.min.js"></script>
+    <script src="https://unpkg.com/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header-content">
-                <h1 class="x-logo">FreedomXGames</h1>
+                <h1 class="x-logo">FreedomXFootball</h1>
                 <span class="bitcoin-icon">₿</span>
             </div>
             <p class="tagline">Where the Sharpest Minds in Football Come to Play</p>
@@ -32,14 +35,14 @@
     <section id="hero">
         <div class="container">
             <h2 class="hero-title">Join the Ultimate Football Experience</h2>
-            <p class="hero-text">Step into the arena of FreedomXGames, where strategy, skill, and swagger collide!</p>
+            <p class="hero-text">Step into the arena of FreedomXFootball, where strategy, skill, and swagger collide!</p>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
-            <h2>About FreedomXGames</h2>
-            <p>FreedomXGames is a cutting-edge football game uniting fans, semi-pros, and pros in a competitive arena. Compete, strategize, and dominate to win exciting rewards.</p>
+            <h2>About FreedomXFootball</h2>
+            <p>FreedomXFootball is a cutting-edge football game uniting fans, semi-pros, and pros in a competitive arena. Compete, strategize, and dominate to win exciting rewards.</p>
         </div>
     </section>
 
@@ -143,9 +146,10 @@
 
     <section id="join">
         <div class="container">
-            <h2>Join Games</h2>
+            <h2>Join Football</h2>
             <p>Ready to rule the field? Sign up and join the football revolution!</p>
-            <a href="#" class="cta-button">Sign Up</a>
+            <a href="#" class="cta-button" onclick="signUp()">Sign Up</a>
+            <a href="#" class="cta-button walletconnect-button" onclick="payWithWalletConnect()">Pay with WalletConnect <span class="bitcoin-icon">₿</span></a>
         </div>
     </section>
 
@@ -176,8 +180,48 @@
 
     <footer>
         <div class="container">
-            <p>© 2025 FreedomXGames. All rights reserved. | America's Simple Strategy Football Game</p>
+            <p>© 2025 FreedomXFootball. All rights reserved. | America's Simple Strategy Football Game</p>
         </div>
     </footer>
+
+    <script>
+        async function signUp() {
+            alert('Sign up not implemented yet.');
+        }
+
+        async function payWithWalletConnect() {
+            const user = await Amplify.Auth.currentAuthenticatedUser();
+            const division = prompt('Enter division (Fan, Semi-Pro, Pro, Weekly):');
+
+            const provider = new WalletConnectProvider.default({
+                rpc: { 1: 'https://mainnet.infura.io/v3/YOUR_INFURA_ID' },
+                qrcode: true
+            });
+            await provider.enable();
+
+            const response = await fetch('https://<your-api-gateway>.execute-api.us-east-1.amazonaws.com/prod/initiate-walletconnect-payment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${user.signInUserSession.idToken.jwtToken}`
+                },
+                body: JSON.stringify({ userId: user.username, division })
+            });
+            const { bitcoinAddress, amountBtc, uri } = await response.json();
+
+            try {
+                await provider.request({
+                    method: 'eth_sendTransaction',
+                    params: [{
+                        to: bitcoinAddress,
+                        value: `0x${(parseFloat(amountBtc) * 1e8).toString(16)}`
+                    }]
+                });
+                alert('Payment initiated! Awaiting blockchain confirmation.');
+            } catch (error) {
+                alert('Payment failed: ' + error.message);
+            }
+        }
+    </script>
 </body>
 </html>
