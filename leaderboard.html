@@ -3,50 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaderboard</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <title>FreedomXGames - Leaderboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Leaderboard</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Rank</th>
-                <th>Name</th>
-                <th>Score</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Player A</td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Player B</td>
-                <td>90</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Player C</td>
-                <td>80</td>
-            </tr>
-            <!-- Add more rows as needed -->
-        </tbody>
-    </table>
+    <header>
+        <div class="container">
+            <h1 class="x-logo">FreedomXGames</h1>
+            <p class="tagline">Where the Sharpest Minds in Football Come to Play</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#fees">Entry Fees</a></li>
+                    <li><a href="index.html#weekly">Weekly Contest</a></li>
+                    <li><a href="index.html#scoring">Scoring Rules</a></li>
+                    <li><a href="#leaderboard">Leaderboard</a></li>
+                    <li><a href="index.html#join">Join</a></li>
+                    <li><a href="index.html#payouts">Payouts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="leaderboard">
+        <div class="container">
+            <h2>Season Leaderboard</h2>
+            <p><strong>Leaderboards reflect season-long performance over 18 weeks. Rankings are updated weekly based on total points and wins. Ties are broken by most wins, then most Monday Night Football (MNF) wins.</strong></p>
+            <div class="payouts-grid">
+                <div class="payout-card">
+                    <h3>Fan Division</h3>
+                    <table>
+                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
+                        <tr><td>1</td><td>JaneDoe</td><td>95</td><td>48</td></tr>
+                        <tr><td>2</td><td>JohnSmith</td><td>95</td><td>50</td></tr>
+                    </table>
+                </div>
+                <div class="payout-card">
+                    <h3>Semi-Pro Division</h3>
+                    <table>
+                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
+                        <tr><td>1</td><td>MikePro</td><td>98</td><td>49</td></tr>
+                        <tr><td>2</td><td>SarahQ</td><td>94</td><td>47</td></tr>
+                    </table>
+                </div>
+                <div class="payout-card">
+                    <h3>Pro Player Division</h3>
+                    <table>
+                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
+                        <tr><td>1</td><td>EliteTom</td><td>100</td><td>51</td></tr>
+                        <tr><td>2</td><td>ProAlex</td><td>96</td><td>50</td></tr>
+                    </table>
+                </div>
+                <div class="payout-card">
+                    <h3>Weekly Contest</h3>
+                    <table>
+                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
+                        <tr><td>1</td><td>WeekWin</td><td>28</td><td>9</td></tr>
+                        <tr><td>2</td><td>FastFred</td><td>27</td><td>8</td></tr>
+                    </table>
+                </div>
+            </div>
+            <p class="note">*Leaderboards reflect season-long performance. Rankings are updated weekly based on total points and wins.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 FreedomXGames. All rights reserved. | America's Simple Strategy Football Game</p>
+        </div>
+    </footer>
 </body>
 </html>
