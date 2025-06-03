@@ -1,159 +1,376 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreedomXFootball</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1 class="x-logo">FreedomXFootball</h1>
-        <p class="tagline">Where the Sharpest Minds in Football Come to Play</p>
-        <nav>
-            <ul>
-                <li><a href="#about">🏈About</a></li>
-                <li><a href="#fees">🏈Entry Fees</a></li>
-                <li><a href="#weekly">🏈Weekly Contest</a></li>
-                <li><a href="#scoring">🏈Scoring Rules</a></li>
-                <li><a href="#leaderboard">🏈Leaderboard</a></li>
-                <li><a href="#payouts">🏈Payouts</a></li>
-            </ul>
-        </nav>
-    </header>
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #7b00ff, #b300ff, #e600ff);
+    background-size: 200% 200%;
+    animation: gradientShift 12s ease infinite;
+    color: #ffffff;
+    overflow-x: hidden;
+    position: relative;
+}
 
-    <main class="container">
-        <section id="hero">
-            <h2 class="hero-title">Join the Ultimate Football Experience</h2>
-            <p class="hero-text">Step into the arena of FreedomXFootball, where strategy, skill, and swagger collide!</p>
-        </section>
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(255, 255, 255, 0.1) 20px, rgba(255, 255, 255, 0.1) 21px),
+        repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(255, 255, 255, 0.1) 20px, rgba(255, 255, 255, 0.1) 21px);
+    pointer-events: none;
+    z-index: -1;
+}
 
-        <section id="about">
-            <h2>About FreedomXFootball</h2>
-            <p>FreedomXFootball is a cutting-edge football game uniting fans, semi-pros, and pros in a competitive arena. Compete, strategize, and dominate to win exciting rewards.</p>
-        </section>
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
-        <section id="fees">
-            <h2>Entry Fees</h2>
-            <div class="fees-grid">
-                <div class="fee-card">
-                    <h3>🏈Fan</h3>
-                    <p class="price">$250 💸</p>
-                    <p class="description">Test your skills as a casual player.</p>
-                    <a href="#" class="cta-button">Enter Now</a>
-                </div>
-                <div class="fee-card">
-                    <h3>🏈Semi-Pro</h3>
-                    <p class="price">$500 💸</p>
-                    <p class="description">Step up your game with higher stakes.</p>
-                    <a href="#" class="cta-button">Enter Now</a>
-                </div>
-                <div class="fee-card">
-                    <h3>🏈Pro Player</h3>
-                    <p class="price">$1000 💸</p>
-                    <p class="description">Compete with the elite for top rewards.</p>
-                    <a href="#" class="cta-button">Enter Now</a>
-                </div>
-            </div>
-        </section>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
 
-        <section id="weekly">
-            <h2>Weekly Contest</h2>
-            <div class="fees-grid">
-                <div class="fee-card">
-                    <h3>🏈New! $50 Weekly Contest</h3>
-                    <p class="description">
-                        Join our exciting weekly contest for a chance to win big! Enter for just <strong>$50</strong> and compete for weekly payouts.<br>
-                        <strong>Entry Fee:</strong> $50 💸<br>
-                        <strong>Payout:</strong> After each week via Venmo<br>
-                        <strong>Tiebreaker:</strong> Closest to MNF score without going over<br>
-                        <strong>Points Rule:</strong> No points for ties
-                    </p>
-                    <a href="#" class="cta-button">Enter Now</a>
-                </div>
-            </div>
-        </section>
+header {
+    text-align: center;
+    padding: 15px 10px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
 
-        <section id="scoring">
-            <h2>Scoring Rules</h2>
-            <p class="note">Important: No points are awarded for ties in any scoring category.</p>
-            <ul>
-                <li>
-                    <span class="point-icon point-a">1</span>
-                    <strong>1 Point – Straight-Up Win</strong><br>
-                    <em>Pick a team to win, no spread. Popular but low reward.</em><br>
-                    <em>Win: +1 point</em>
-                </li>
-                <li>
-                    <span class="point-icon point-b">2</span>
-                    <strong>2 Points – Win With the Spread</strong><br>
-                    <em>Pick a team to win or cover the spread.</em><br>
-                    <em>Example: Underdog +7 loses by 3, you win.</em>
-                </li>
-                <li>
-                    <span class="point-icon point-c">3</span>
-                    <strong>3 Points – Underdog Wins Straight-Up</strong><br>
-                    <em>Pick an underdog to win outright, no spread. High risk, high reward.</em><br>
-                    <em>Win: +3 points</em>
-                </li>
-            </ul>
-        </section>
+.x-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: #00ffdd;
+    text-shadow: 0 0 12px #00ffdd;
+    margin: 0;
+    animation: glowPulse 2s ease-in-out infinite;
+}
 
-        <section id="leaderboard">
-            <h2>Season Leaderboard</h2>
-            <div class="fees-grid">
-                <div class="payout-card">
-                    <h3>🏈Fan Division</h3>
-                    <table>
-                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
-                    </table>
-                </div>
-                <div class="payout-card">
-                    <h3>🏈Semi-Pro Division</h3>
-                    <table>
-                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
-                    </table>
-                </div>
-                <div class="payout-card">
-                    <h3>🏈Pro Player Division</h3>
-                    <table>
-                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
-                    </table>
-                </div>
-                <div class="payout-card">
-                    <h3>🏈Weekly Contest</h3>
-                    <table>
-                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
-                    </table>
-                </div>
-            </div>
-            <p class="note">*Leaderboards reflect season-long performance. Rankings are updated weekly based on total points and wins.</p>
-        </section>
+@keyframes glowPulse {
+    0%, 100% { text-shadow: 0 0 12px #00ffdd; }
+    50% { text-shadow: 0 0 24px #00ffdd, 0 0 36px #00ffdd; }
+}
 
-        <section id="payouts">
-            <h2>Payouts</h2>
-            <p><strong>Top 25% of players in each division split the total pot</strong>, with <span style="color: #ff00dd;">1st place</span> winners earning larger shares. In case of a points tie at the end of the 18-week season, the tiebreaker is the player who was in the lead for the most weeks during the season.</p>
-            <div class="payouts-grid">
-                <div class="payout-card">
-                    <h3>🏈Fan Division</h3>
-                    <p class="description">100 players × $250 = $25,000 pot. Approx: <span style="color: #ff00dd;">1st: $3,750</span>, 2nd: $2,625, 3rd: $1,875, 4th-10th: $625 each, 11th-25th: $250 each.</p>
-                </div>
-                <div class="payout-card">
-                    <h3>🏈Semi-Pro Division</h3>
-                    <p class="description">100 players × $500 = $50,000 pot. Approx: <span style="color: #ff00dd;">1st: $7,500</span>, 2nd: $5,250, 3rd: $3,750, 4th-10th: $1,250 each, 11th-25th: $500 each.</p>
-                </div>
-                <div class="payout-card">
-                    <h3>🏈Pro Player Division</h3>
-                    <p class="description">100 players × $1,000 = $100,000 pot. Approx: <span style="color: #ff00dd;">1st: $15,000</span>, 2nd: $10,500, 3rd: $7,500, 4th-10th: $2,500 each, 11th-25th: $1,000 each.</p>
-                </div>
-            </div>
-            <p class="note">*Payouts are distributed via Venmo after each season, based on the exact distribution formula.</p>
-        </section>
-    </main>
+.tagline {
+    font-size: 14px;
+    color: #d8bfff;
+    margin: 5px 0 8px;
+}
 
-    <footer>
-        <p>© 2025 FreedomXFootball. All rights reserved. | America's Simple Strategy Football Game</p>
-    </footer>
-</body>
-</html>
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    transition: color 0.3s;
+    position: relative;
+}
+
+nav a:hover {
+    color: #00ffdd;
+    text-shadow: 0 0 6px #00ffdd;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #00ffdd;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+section {
+    padding: 30px 10px;
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #00ffdd;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #00ffdd;
+}
+
+#hero {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    padding: 30px 10px;
+    margin: 8px auto;
+    max-width: 800px;
+    position: relative;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #00ffdd 0%, transparent 70%);
+    opacity: 0.3;
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #ff00dd 0%, transparent 70%);
+    opacity: 0.3;
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.hero-title {
+    font-size: 48px;
+    background: linear-gradient(45deg, #00ffdd, #ff00dd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 12px rgba(0, 255, 221, 0.5);
+    margin-bottom: 12px;
+}
+
+.hero-text {
+    font-size: 16px;
+    color: #d8bfff;
+}
+
+.fees-grid, .payouts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.fee-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.fee-card:hover {
+    transform: translateY(-6px) rotate(2deg);
+    box-shadow: 0 6px 12px rgba(0, 255, 221, 0.4);
+}
+
+.fee-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    color: #00ffdd;
+    margin: 0 0 6px;
+}
+
+.fee-card .price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 6px 0;
+}
+
+.fee-card .description {
+    font-size: 13px;
+    color: #d8bfff;
+    margin: 0 0 12px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 8px 18px;
+    background: #F7931A;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 12px #F7931A;
+}
+
+.cta-button:hover {
+    background: #e67e00;
+    transform: scale(1.03);
+    box-shadow: 0 0 24px #F7931A;
+}
+
+.payout-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+}
+
+.payout-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    color: #00ffdd;
+}
+
+.payout-card .price {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.payout-card .description {
+    font-size: 13px;
+    color: #d8bfff;
+}
+
+#scoring ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#scoring li {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.point-icon {
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.point-a { background: #00ffdd; color: #1a0033; }
+.point-b { background: #ff00dd; color: #ffffff; }
+.point-c { background: #dd00ff; color: #ffffff; }
+
+#scoring strong {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+#scoring em {
+    zenith: #d8bfff;
+    font-size: 13px;
+}
+
+.payout-example li {
+    font-size: 13px;
+    color: #d8bfff;
+    margin-bottom: 6px;
+}
+
+.payout-number {
+    font-size: 20px;
+    font-weight: 900;
+    color: #FFD700;
+    text-shadow: 0 0 6px #FFD700;
+}
+
+.highlight {
+    color: #00ffdd;
+    font-weight: 700;
+}
+
+.note {
+    font-size: 11px;
+    color: #cc99ff;
+    text-align: center;
+    margin-top: 12px;
+}
+
+#join {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    padding: 30px 10px;
+    margin: 8px auto;
+    max-width: 800px;
+}
+
+footer {
+    text-align: center;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+footer p {
+    margin: 0;
+    font-size: 11px;
+    color: #d8bfff;
+}
+
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard-table th {
+    background: #00ffdd;
+    color: #1a0033;
+    padding: 10px;
+}
+
+.leaderboard-table td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.leaderboard-table tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.leaderboard-table tr:hover {
+    background: rgba(0, 255, 221, 0.2);
+}
+
+.trophy {
+    font-size: 20px;
+    margin-right: 5px;
+}
