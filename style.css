@@ -6,21 +6,6 @@ body {
     animation: gradientShift 12s ease infinite;
     color: #ffffff;
     overflow-x: hidden;
-    position: relative;
-}
-
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:
-        repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(255, 255, 255, 0.1) 20px, rgba(255, 255, 255, 0.1) 21px),
-        repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(255, 255, 255, 0.1) 20px, rgba(255, 255, 255, 0.1) 21px);
-    pointer-events: none;
-    z-index: -1;
 }
 
 @keyframes gradientShift {
@@ -50,12 +35,6 @@ header {
     color: #00ffdd;
     text-shadow: 0 0 12px #00ffdd;
     margin: 0;
-    animation: glowPulse 2s ease-in-out infinite;
-}
-
-@keyframes glowPulse {
-    0%, 100% { text-shadow: 0 0 12px #00ffdd; }
-    50% { text-shadow: 0 0 24px #00ffdd, 0 0 36px #00ffdd; }
 }
 
 .tagline {
@@ -79,27 +58,11 @@ nav a {
     font-weight: 700;
     font-size: 13px;
     transition: color 0.3s;
-    position: relative;
 }
 
 nav a:hover {
     color: #00ffdd;
     text-shadow: 0 0 6px #00ffdd;
-}
-
-nav a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #00ffdd;
-    transition: width 0.3s;
-}
-
-nav a:hover::after {
-    width: 100%;
 }
 
 section {
@@ -123,46 +86,10 @@ h2 {
     padding: 30px 10px;
     margin: 8px auto;
     max-width: 800px;
-    position: relative;
-}
-
-#hero::before {
-    content: '';
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    width: 100px;
-    height: 100px;
-    background: radial-gradient(circle, #00ffdd 0%, transparent 70%);
-    opacity: 0.3;
-    border-radius: 50%;
-    animation: float 6s ease-in-out infinite;
-}
-
-#hero::after {
-    content: '';
-    position: absolute;
-    bottom: 20%;
-    right: 10%;
-    width: 150px;
-    height: 150px;
-    background: radial-gradient(circle, #ff00dd 0%, transparent 70%);
-    opacity: 0.3;
-    border-radius: 50%;
-    animation: float 8s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
 }
 
 .hero-title {
-    font-size: 48px;
-    background: linear-gradient(45deg, #00ffdd, #ff00dd);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 12px rgba(0, 255, 221, 0.5);
+    font-size: 36px;
     margin-bottom: 12px;
 }
 
@@ -190,7 +117,7 @@ h2 {
 }
 
 .fee-card:hover {
-    transform: translateY(-6px) rotate(2deg);
+    transform: translateY(-6px);
     box-shadow: 0 6px 12px rgba(0, 255, 221, 0.4);
 }
 
@@ -217,20 +144,18 @@ h2 {
 .cta-button {
     display: inline-block;
     padding: 8px 18px;
-    background: #F7931A;
-    color: #ffffff;
+    background: #00ffdd;
+    color: #1a0033;
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
     text-decoration: none;
     border-radius: 8px;
-    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 0 12px #F7931A;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .cta-button:hover {
-    background: #e67e00;
+    background: #00ccbb;
     transform: scale(1.03);
-    box-shadow: 0 0 24px #F7931A;
 }
 
 .payout-card {
@@ -255,6 +180,27 @@ h2 {
 .payout-card .description {
     font-size: 13px;
     color: #d8bfff;
+}
+
+.payout-card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.payout-card th, .payout-card td {
+    padding: 8px;
+    font-size: 13px;
+    color: #d8bfff;
+}
+
+.payout-card th {
+    background: rgba(255, 255, 255, 0.1);
+    color: #00ffdd;
+}
+
+.payout-card tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05);
 }
 
 #scoring ul {
@@ -295,7 +241,7 @@ h2 {
 }
 
 #scoring em {
-    zenith: #d8bfff;
+    color: #d8bfff;
     font-size: 13px;
 }
 
@@ -303,13 +249,6 @@ h2 {
     font-size: 13px;
     color: #d8bfff;
     margin-bottom: 6px;
-}
-
-.payout-number {
-    font-size: 20px;
-    font-weight: 900;
-    color: #FFD700;
-    text-shadow: 0 0 6px #FFD700;
 }
 
 .highlight {
@@ -344,33 +283,4 @@ footer p {
     margin: 0;
     font-size: 11px;
     color: #d8bfff;
-}
-
-.leaderboard-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.leaderboard-table th {
-    background: #00ffdd;
-    color: #1a0033;
-    padding: 10px;
-}
-
-.leaderboard-table td {
-    padding: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.leaderboard-table tr:nth-child(even) {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.leaderboard-table tr:hover {
-    background: rgba(0, 255, 221, 0.2);
-}
-
-.trophy {
-    font-size: 20px;
-    margin-right: 5px;
 }
