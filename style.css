@@ -28,6 +28,13 @@ header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
 .x-logo {
     font-family: 'Orbitron', sans-serif;
     font-size: 36px;
@@ -35,6 +42,19 @@ header {
     color: #00ffdd;
     text-shadow: 0 0 12px #00ffdd;
     margin: 0;
+}
+
+.bitcoin-icon {
+    font-size: 24px;
+    color: #F7931A;
+    margin-left: 10px;
+    text-shadow: 0 0 8px #F7931A;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.bitcoin-icon:hover {
+    opacity: 1;
 }
 
 .tagline {
