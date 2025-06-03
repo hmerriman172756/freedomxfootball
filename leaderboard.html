@@ -3,28 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreedomXGames - Leaderboard</title>
+    <title>FreedomXGames</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1 class="x-logo">FreedomXGames</h1>
+            <div class="header-content">
+                <h1 class="x-logo">FreedomXGames</h1>
+                <span class="bitcoin-icon">₿</span>
+            </div>
             <p class="tagline">Where the Sharpest Minds in Football Come to Play</p>
             <nav>
                 <ul>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#fees">Entry Fees</a></li>
-                    <li><a href="index.html#weekly">Weekly Contest</a></li>
-                    <li><a href="index.html#scoring">Scoring Rules</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#fees">Entry Fees</a></li>
+                    <li><a href="#weekly">Weekly Contest</a></li>
+                    <li><a href="#scoring">Scoring Rules</a></li>
                     <li><a href="#leaderboard">Leaderboard</a></li>
-                    <li><a href="index.html#join">Join</a></li>
-                    <li><a href="index.html#payouts">Payouts</a></li>
+                    <li><a href="#join">Join</a></li>
+                    <li><a href="#payouts">Payouts</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2 class="hero-title">Join the Ultimate Football Experience</h2>
+            <p class="hero-text">Step into the arena of FreedomXGames, where strategy, skill, and swagger collide!</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About FreedomXGames</h2>
+            <p>FreedomXGames is a cutting-edge football game uniting fans, semi-pros, and pros in a competitive arena. Compete, strategize, and dominate to win exciting rewards.</p>
+        </div>
+    </section>
+
+    <section id="fees">
+        <div class="container">
+            <h2>Entry Fees</h2>
+            <div class="fees-grid">
+                <div class="fee-card">
+                    <h3>Fan</h3>
+                    <p class="price">$250 💸</p>
+                    <p class="description">Test your skills as a casual player.</p>
+                    <a href="#join" class="cta-button">Enter Now</a>
+                </div>
+                <div class="fee-card">
+                    <h3>Semi-Pro</h3>
+                    <p class="price">$500 💸</p>
+                    <p class="description">Step up your game with higher stakes.</p>
+                    <a href="#join" class="cta-button">Enter Now</a>
+                </div>
+                <div class="fee-card">
+                    <h3>Pro Player</h3>
+                    <p class="price">$1000 💸</p>
+                    <p class="description">Compete with the elite for top rewards.</p>
+                    <a href="#join" class="cta-button">Enter Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="weekly">
+        <div class="container">
+            <h2>Weekly Contest</h2>
+            <div class="fees-grid">
+                <div class="fee-card">
+                    <h3>New! $50 Weekly Contest</h3>
+                    <p>Join our exciting weekly contest for a chance to win big! Enter for just $50 and pick all games each week (14–16 games) for weekly payouts.</p>
+                    <p><strong>Entry Fee:</strong> $50 💸</p>
+                    <p><strong>Payout:</strong> After each week via Venmo</p>
+                    <p><strong>Tiebreaker:</strong> Closest to MNF score without going over</p>
+                    <p><strong>Points Rule:</strong> No points for ties</p>
+                    <a href="#join" class="cta-button">Enter Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="scoring">
+        <div class="container">
+            <h2>Scoring Rules</h2>
+            <p><strong>Important: No points are awarded for ties in any scoring category.</strong></p>
+            <p><strong>Players pick all games each week (14–16 games, varying by week), including at least one Monday Night Football (MNF) game. Points accumulate over the 18-week season for season-long contests or reset weekly for the Weekly Contest. Max weekly points: 42–48 (14–16 underdog wins). Max season points: ~816.</strong></p>
+            <ul>
+                <li><span class="point-icon point-a">Tier 1</span><strong>1 Point – Straight-Up Win</strong><br>Pick a team to win, no spread. Popular but low reward.<br><em>Win: +1 point</em></li>
+                <li><span class="point-icon point-b">Tier 2</span><strong>2 Points – Win With the Spread</strong><br>Pick a team to win or cover the spread.<br><em>Example: Underdog +7 loses by 3, you win.</em></li>
+                <li><span class="point-icon point-c">Tier 3</span><strong>3 Points – Underdog Wins Straight-Up</strong><br>Pick an underdog to win outright, no spread. High risk, high reward.<br><em>Win: +3 points</em></li>
+            </ul>
+        </div>
+    </section>
 
     <section id="leaderboard">
         <div class="container">
@@ -58,13 +131,46 @@
                 <div class="payout-card">
                     <h3>Weekly Contest</h3>
                     <table>
-                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
+                        <tr><th>Week</th><th>Player</th><th>Points</th><th>Wins</th></tr>
                         <tr><td>1</td><td>WeekWin</td><td>32</td><td>11</td></tr>
-                        <tr><td>2</td><td>FastFred</td><td>28</td><td>10</td></tr>
+                        <tr><td>1</td><td>FastFred</td><td>28</td><td>10</td></tr>
                     </table>
                 </div>
             </div>
-            <p class="note">*Leaderboards reflect season-long performance for season contests and weekly performance for the Weekly Contest. Game counts vary weekly (14–16 games).</p>
+            <p class="note">*Leaderboard data reflects season-long performance for season contests and weekly performance for the Weekly Contest. Game counts vary weekly (14–16 games).</p>
+        </div>
+    </section>
+
+    <section id="join">
+        <div class="container">
+            <h2>Join Games</h2>
+            <p>Ready to rule the field? Sign up and join the football revolution!</p>
+            <a href="#" class="cta-button">Sign Up</a>
+        </div>
+    </section>
+
+    <section id="payouts">
+        <div class="container">
+            <h2>Payouts</h2>
+            <p><strong>Top 25% of players in each division split 25% of the total pot, with higher scorers earning larger shares. In case of a points tie at the end of the 18-week season, the tiebreaker is the player with the most wins. If still tied, the player with the most Monday Night Football (MNF) wins ranks higher.</strong></p>
+            <div class="payouts-grid">
+                <div class="payout-card">
+                    <h3>Fan Division</h3>
+                    <p class="price" style="color: #00ffdd;"><strong>1st: $3,750</strong></p>
+                    <p class="description"><strong>2nd: $2,625, 3rd: $1,875, 4th-10th: $625 each, 11th-25th: $250 each.</strong></p>
+                </div>
+                <div class="payout-card">
+                    <h3>Semi-Pro Division</h3>
+                    <p class="price" style="color: #00ffdd;"><strong>1st: $7,500</strong></p>
+                    <p class="description"><strong>2nd: $5,250, 3rd: $3,750, 4th-10th: $1,250 each, 11th-25th: $500 each.</strong></p>
+                </div>
+                <div class="payout-card">
+                    <h3>Pro Player Division</h3>
+                    <p class="price" style="color: #00ffdd;"><strong>1st: $15,000</strong></p>
+                    <p class="description"><strong>2nd: $10,500, 3rd: $7,500, 4th-10th: $2,500 each, 11th-25th: $1,000 each.</strong></p>
+                </div>
+            </div>
+            <p class="note">*Payouts are distributed via Venmo after each season for season contests and weekly for the Weekly Contest.</p>
         </div>
     </section>
 
