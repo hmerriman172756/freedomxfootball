@@ -10,7 +10,7 @@ body {
 
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+    50% { background-position: 200% 50%; }
     100% { background-position: 0% 50%; }
 }
 
@@ -22,10 +22,10 @@ body {
 
 header {
     text-align: center;
-    padding: 15px 10px;
+    padding: 15px;
     background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .header-content {
@@ -77,7 +77,7 @@ nav a {
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
     font-size: 13px;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -86,7 +86,7 @@ nav a:hover {
 }
 
 section {
-    padding: 30px 10px;
+    padding: 20px 10px;
 }
 
 h2 {
@@ -96,20 +96,20 @@ h2 {
     color: #00ffdd;
     text-align: center;
     margin-bottom: 15px;
-    text-shadow: 0 0 10px #00ffdd;
+    text-shadow: 0 0 6px #00ffdd;
 }
 
 #hero {
     text-align: center;
-    background: rgba(0, 0, 0, 0.25);
-    border-radius: 12px;
-    padding: 30px 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px 10px;
     margin: 8px auto;
     max-width: 800px;
 }
 
 .hero-title {
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 12px;
 }
 
@@ -120,43 +120,42 @@ h2 {
 
 .fees-grid, .payouts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
     margin-top: 12px;
 }
 
 .fee-card {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
     padding: 15px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .fee-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 6px 12px rgba(0, 255, 221, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 255, 221, 0.3);
 }
 
 .fee-card h3 {
     font-family: 'Orbitron', sans-serif;
     font-size: 20px;
     color: #00ffdd;
-    margin: 0 0 6px;
+    margin: 0 0 8px;
 }
 
 .fee-card .price {
     font-size: 24px;
     font-weight: 700;
     color: #ffffff;
-    margin: 6px 0;
+    margin: 8px 0;
 }
 
 .fee-card .description {
-    font-size: 13px;
+    font-size: 14px;
     color: #d8bfff;
     margin: 0 0 12px;
 }
@@ -170,16 +169,33 @@ h2 {
     font-weight: 700;
     text-decoration: none;
     border-radius: 8px;
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
     background: #00ccbb;
-    transform: scale(1.03);
+    transform: scale(1.05);
+}
+
+.walletconnect-button {
+    background-color: #F7931A;
+    color: #ffffff;
+    margin-left: 10px;
+}
+
+.walletconnect-button:hover {
+    background-color: #e07b10;
+    transform: scale(1.05);
+}
+
+.walletconnect-button .bitcoin-icon {
+    font-size: 16px;
+    margin-left: 5px;
+    text-shadow: none;
 }
 
 .payout-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 8px;
     padding: 12px;
@@ -190,6 +206,7 @@ h2 {
     font-family: 'Orbitron', sans-serif;
     font-size: 18px;
     color: #00ffdd;
+    margin-bottom: 8px;
 }
 
 .payout-card .price {
@@ -198,7 +215,7 @@ h2 {
 }
 
 .payout-card .description {
-    font-size: 13px;
+    font-size: 14px;
     color: #d8bfff;
 }
 
@@ -232,7 +249,7 @@ h2 {
 
 #scoring li {
     background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     padding: 12px;
     margin-bottom: 12px;
@@ -261,23 +278,12 @@ h2 {
 }
 
 #scoring em {
-    color: #d8bfff;
-    font-size: 13px;
-}
-
-.payout-example li {
     font-size: 13px;
     color: #d8bfff;
-    margin-bottom: 6px;
-}
-
-.highlight {
-    color: #00ffdd;
-    font-weight: 700;
 }
 
 .note {
-    font-size: 11px;
+    font-size: 12px;
     color: #cc99ff;
     text-align: center;
     margin-top: 12px;
@@ -285,9 +291,9 @@ h2 {
 
 #join {
     text-align: center;
-    background: rgba(0, 0, 0, 0.25);
-    border-radius: 12px;
-    padding: 30px 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px 10px;
     margin: 8px auto;
     max-width: 800px;
 }
@@ -296,11 +302,11 @@ footer {
     text-align: center;
     padding: 12px;
     background: rgba(0, 0, 0, 0.4);
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 footer p {
     margin: 0;
-    font-size: 11px;
+    font-size: 12px;
     color: #d8bfff;
 }
