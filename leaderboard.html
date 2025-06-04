@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreedomXFootball - Leaderboard</title>
-    <link rel="stylesheet" href="style.css">
+    <title>FreedomXGames Leaderboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="header-content">
-                <h1 class="x-logo">FreedomXFootball</h1>
-                <span class="bitcoin-icon">₿</span>
-            </div>
+            <h1 class="x-logo">FreedomXGames</h1>
             <p class="tagline">Where the Sharpest Minds in Football Come to Play</p>
             <nav>
                 <ul>
                     <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#fees">Entry Fees</a></li>
-                    <li><a href="index.html#weekly">Weekly Contest</a></li>
+                    <li><a href="index.html#entry-fees">Entry Fees</a></li>
+                    <li><a href="index.html#weekly-contest">Weekly Contest</a></li>
                     <li><a href="index.html#scoring">Scoring Rules</a></li>
                     <li><a href="#leaderboard">Leaderboard</a></li>
                     <li><a href="index.html#join">Join</a></li>
@@ -32,49 +29,16 @@
     <section id="leaderboard">
         <div class="container">
             <h2>Season Leaderboard</h2>
-            <p><strong>Leaderboards reflect season-long performance over 18 weeks for season contests and weekly performance for the Weekly Contest. Rankings are updated weekly based on total points and wins. Ties are broken by most wins, then most Monday Night Football (MNF) wins.</strong></p>
             <div class="payouts-grid">
-                <div class="payout-card">
-                    <h3>Fan Division</h3>
-                    <table>
-                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
-                        <tr><td>1</td><td>JaneDoe</td><td>88</td><td>140</td></tr>
-                        <tr><td>2</td><td>JohnSmith</td><td>88</td><td>145</td></tr>
-                    </table>
-                </div>
-                <div class="payout-card">
-                    <h3>Semi-Pro Division</h3>
-                    <table>
-                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
-                        <tr><td>1</td><td>MikePro</td><td>92</td><td>142</td></tr>
-                        <tr><td>2</td><td>SarahQ</td><td>86</td><td>136</td></tr>
-                    </table>
-                </div>
-                <div class="payout-card">
-                    <h3>Pro Player Division</h3>
-                    <table>
-                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
-                        <tr><td>1</td><td>EliteTom</td><td>100</td><td>148</td></tr>
-                        <tr><td>2</td><td>ProAlex</td><td>90</td><td>142</td></tr>
-                    </table>
-                </div>
-                <div class="payout-card">
-                    <h3>Weekly Contest</h3>
-                    <table>
-                        <tr><th>Week</th><th>Player</th><th>Points</th><th>Wins</th></tr>
-                        <tr><td>1</td><td>WeekWin</td><td>32</td><td>11</td></tr>
-                        <tr><td>1</td><td>FastFred</td><td>28</td><td>10</td></tr>
-                    </table>
-                </div>
+                <div class="payout-card"><h3>Fan Division</h3><p>Rank Player Points Wins</p></div>
+                <div class="payout-card"><h3>Semi-Pro Division</h3><p>Rank Player Points Wins</p></div>
+                <div class="payout-card"><h3>Pro Player Division</h3><p>Rank Player Points Wins</p></div>
+                <div class="payout-card"><h3>Weekly Contest</h3><p>Rank Player Points Wins</p></div>
             </div>
-            <p class="note">*Leaderboard data reflects season-long performance for season contests and weekly performance for the Weekly Contest. Game counts vary weekly (14–16 games).</p>
+            <p class="note">*Leaderboards reflect season-long performance. Rankings are updated weekly based on total points and wins.</p>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>© 2025 FreedomXFootball. All rights reserved. | America's Simple Strategy Football Game</p>
-        </div>
-    </footer>
+    <script src="leaderboard.js"></script>
 </body>
 </html>
