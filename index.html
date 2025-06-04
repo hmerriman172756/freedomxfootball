@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreedomxFootball</title>
+    <title>FreedomXGames</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1 class="x-logo">FreedomxFootball</h1>
+            <h1 class="x-logo">FreedomXGames</h1>
             <p class="tagline">Where the Sharpest Minds in Football Come to Play</p>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#entry-fees">Entry Fees</a></li>
-                    <li><a href="#weekly-contest">Weekly Contest</a></li>
+                    <li><a href="#fees">Entry Fees</a></li>
+                    <li><a href="#weekly">Weekly Contest</a></li>
                     <li><a href="#scoring">Scoring Rules</a></li>
-                    <li><a href="leaderboard.html">Leaderboard</a></li>
+                    <li><a href="#leaderboard">Leaderboard</a></li>
                     <li><a href="#join">Join</a></li>
                     <li><a href="#payouts">Payouts</a></li>
                 </ul>
@@ -29,18 +29,18 @@
     <section id="hero">
         <div class="container">
             <h2 class="hero-title">Join the Ultimate Football Experience</h2>
-            <p class="hero-text">Step into the arena of FreedomxFootball, where strategy, skill, and swagger collide!</p>
+            <p class="hero-text">Step into the arena of FreedomXGames, where strategy, skill, and swagger collide!</p>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
-            <h2>About FreedomxFootball</h2>
-            <p>FreedomxFootball is a cutting-edge football game uniting fans, semi-pros, and pros in a competitive arena. Compete, strategize, and dominate to win exciting rewards.</p>
+            <h2>About FreedomXGames</h2>
+            <p>FreedomXGames is a cutting-edge football game uniting fans, semi-pros, and pros in a competitive arena. Compete, strategize, and dominate to win exciting rewards.</p>
         </div>
     </section>
 
-    <section id="entry-fees">
+    <section id="fees">
         <div class="container">
             <h2>Entry Fees</h2>
             <div class="fees-grid">
@@ -49,41 +49,38 @@
                     <p class="price">$250 💸</p>
                     <p class="description">Test your skills as a casual player.</p>
                     <a href="#" class="cta-button">Enter Now</a>
-                    <p class="note">Payment via Venmo</p>
                 </div>
                 <div class="fee-card">
                     <h3>Semi-Pro</h3>
                     <p class="price">$500 💸</p>
                     <p class="description">Step up your game with higher stakes.</p>
                     <a href="#" class="cta-button">Enter Now</a>
-                    <p class="note">Payment via Venmo</p>
                 </div>
                 <div class="fee-card">
                     <h3>Pro Player</h3>
                     <p class="price">$1000 💸</p>
                     <p class="description">Compete with the elite for top rewards.</p>
                     <a href="#" class="cta-button">Enter Now</a>
-                    <p class="note">Payment via Venmo</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="weekly-contest">
+    <section id="weekly">
         <div class="container">
             <h2>Weekly Contest</h2>
             <div class="fees-grid">
                 <div class="fee-card">
                     <h3>New! $50 Weekly Contest</h3>
-                    <p>Join our exciting weekly contest for a chance to win big! Enter for just $50 and compete for weekly payouts.</p>
-                    <ul>
-                        <li>Entry Fee: $50 💸</li>
-                        <li>Payout: After each week via Venmo</li>
-                        <li>Tiebreaker: Closest to MNF score without going over</li>
-                        <li>Points Rule: No points for ties</li>
-                    </ul>
+                    <p class="price">$50 💸</p>
+                    <p class="description">
+                        Join our exciting weekly contest for a chance to win big! Enter for just $50 and compete for weekly payouts.<br>
+                        <strong>Entry Fee:</strong> $50 💸<br>
+                        <strong>Payout:</strong> After each week via Venmo<br>
+                        <strong>Tiebreaker:</strong> Closest to MNF score without going over<br>
+                        <strong>Points Rule:</strong> No points for ties
+                    </p>
                     <a href="#" class="cta-button">Enter Now</a>
-                    <p class="note">Payment via Venmo</p>
                 </div>
             </div>
         </div>
@@ -92,11 +89,27 @@
     <section id="scoring">
         <div class="container">
             <h2>Scoring Rules</h2>
-            <p>Important: No points are awarded for ties in any scoring category.</p>
+            <p><strong>Important:</strong> No points are awarded for ties in any scoring category.</p>
             <ul>
-                <li><span class="point-icon point-a">1</span><strong>1 Point – Straight-Up Win</strong><br><em>Pick a team to win, no spread. Popular but low reward.</em><br>Win: +1 point</li>
-                <li><span class="point-icon point-b">2</span><strong>2 Points – Win With the Spread</strong><br><em>Pick a team to win or cover the spread.</em><br>Example: Underdog +7 loses by </li>
-                <li><span class="point-icon point-c">3</span><strong>3 Points – Underdog Wins Straight-Up</strong><br><em>Pick an underdog to win outright, no spread. High risk, high reward.</em><br>Win: +3 points</li>
+                <li>
+                    <span class="point-icon point-a">1</span>
+                    <strong>1 Point – Straight-Up Win</strong><br>
+                    Pick a team to win, no spread. Popular but low reward.<br>
+                    <em>Win: +1 point</em>
+                </li>
+                <li>
+                    <span class="point-icon point-b">2</span>
+                    <strong>2 Points – Win With the Spread</strong><br>
+                    Pick a team to win or cover the spread. Covers if the favorite wins by more than the spread or the underdog loses by less than the spread (or wins outright).<br>
+                    <em>Example: Underdog +7 loses by 3 (covers), or Favorite -7 wins by 10 (covers).</em><br>
+                    <em>Win: +2 points</em>
+                </li>
+                <li>
+                    <span class="point-icon point-c">3</span>
+                    <strong>3 Points – Underdog Wins Straight-Up</strong><br>
+                    Pick an underdog to win outright, no spread. High risk, high reward.<br>
+                    <em>Win: +3 points</em>
+                </li>
             </ul>
         </div>
     </section>
@@ -105,10 +118,30 @@
         <div class="container">
             <h2>Season Leaderboard</h2>
             <div class="payouts-grid">
-                <div class="payout-card"><h3>Fan Division</h3><p>Rank Player Points Wins</p></div>
-                <div class="payout-card"><h3>Semi-Pro Division</h3><p>Rank Player Points Wins</p></div>
-                <div class="payout-card"><h3>Pro Player Division</h3><p>Rank Player Points Wins</p></div>
-                <div class="payout-card"><h3>Weekly Contest</h3><p>Rank Player Points Wins</p></div>
+                <div class="payout-card">
+                    <h3>Fan Division</h3>
+                    <table>
+                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
+                    </table>
+                </div>
+                <div class="payout-card">
+                    <h3>Semi-Pro Division</h3>
+                    <table>
+                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
+                    </table>
+                </div>
+                <div class="payout-card">
+                    <h3>Pro Player Division</h3>
+                    <table>
+                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
+                    </table>
+                </div>
+                <div class="payout-card">
+                    <h3>Weekly Contest</h3>
+                    <table>
+                        <tr><th>Rank</th><th>Player</th><th>Points</th><th>Wins</th></tr>
+                    </table>
+                </div>
             </div>
             <p class="note">*Leaderboards reflect season-long performance. Rankings are updated weekly based on total points and wins.</p>
         </div>
@@ -125,17 +158,23 @@
     <section id="payouts">
         <div class="container">
             <h2>Payouts</h2>
-            <p>Top 25% of players in each division split 75% of the total pot, with higher scorers earning larger shares. In case of a points tie at the end of the 18-week season, the tiebreaker is the player who was in the lead for the most weeks during the season.</p>
-            <p>Example Payouts (100 Players per Division)</p>
+            <p style="font-weight: bold;">
+                The top 25% of players in each division will receive 25% of the total pot, with higher scorers earning larger shares. In case of a points tie at the end of the 18-week season, the tiebreaker is the player who was in the lead for the most weeks during the season.
+            </p>
+            <h3>Example Payouts (100 Players per Division)</h3>
             <ul class="payout-example">
-                <li>Fan Division: 100 players × $250 = $25,000 pot. Top 25 split 75% ($18,750). Approx: 1st: $3,750, 2nd: $2,625, 3rd: $1,875, 4th-10th: $625 each, 11th-25th: $250 each.</li>
-                <li>Semi-Pro Division: 100 players × $500 = $50,000 pot. Top 25 split 75% ($37,500). Approx: 1st: $7,500, 2nd: $5,250, 3rd: $3,750, 4th-10th: $1,250 each, 11th-25th: $500 each.</li>
-                <li>Pro Player Division: 100 players × $1,000 = $100,000 pot. Top 25 split 75% ($75,000). Approx: 1st: $15,000, 2nd: $10,500, 3rd: $7,500, 4th-10th: $2,500 each, 11th-25th: $1,000 each.</li>
+                <li><strong>Fan Division:</strong> 100 players × $250 = $25,000 pot. Top 25 split 25% ($6,250). Approx: <span style="color: #00ffdd;">1st: $1,250</span>, 2nd: $875, 3rd: $625, 4th-10th: $208 each, 11th-25th: $83 each.</li>
+                <li><strong>Semi-Pro Division:</strong> 100 players × $500 = $50,000 pot. Top 25 split 25% ($12,500). Approx: <span style="color: #00ffdd;">1st: $2,500</span>, 2nd: $1,750, 3rd: $1,250, 4th-10th: $416 each, 11th-25th: $166 each.</li>
+                <li><strong>Pro Player Division:</strong> 100 players × $1,000 = $100,000 pot. Top 25 split 25% ($25,000). Approx: <span style="color: #00ffdd;">1st: $5,000</span>, 2nd: $3,500, 3rd: $2,500, 4th-10th: $833 each, 11th-25th: $333 each.</li>
             </ul>
             <p class="note">*Payouts are distributed via Venmo after each season, based on the exact distribution formula.</p>
         </div>
     </section>
 
-    <script src="app.js"></script>
+    <footer>
+        <div class="container">
+            <p>© 2025 FreedomXGames. All rights reserved. | America's Simple Strategy Football Game</p>
+        </div>
+    </footer>
 </body>
 </html>
